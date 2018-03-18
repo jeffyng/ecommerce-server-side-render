@@ -621,12 +621,26 @@ function DeprecationError (namespace, message, stack) {
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(132);
+} else {
+  module.exports = __webpack_require__(133);
+}
+
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = require("stream");
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -939,13 +953,13 @@ function newObject() {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 module.exports = require("fs");
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1111,7 +1125,7 @@ function parse(val) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1378,7 +1392,7 @@ function toIdentifier (str) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1647,7 +1661,7 @@ function tryNormalizeType (value) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1804,20 +1818,6 @@ function fresh (url, parsedUrl) {
     parsedUrl !== null &&
     (Url === undefined || parsedUrl instanceof Url) &&
     parsedUrl._raw === url
-}
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(132);
-} else {
-  module.exports = __webpack_require__(133);
 }
 
 
@@ -2230,7 +2230,7 @@ function status (code) {
  * @private
  */
 
-var createError = __webpack_require__(8)
+var createError = __webpack_require__(9)
 var getBody = __webpack_require__(78)
 var iconv = __webpack_require__(38)
 var onFinished = __webpack_require__(16)
@@ -3133,7 +3133,7 @@ function mixinProperties(obj, proto) {
  * @private
  */
 
-var createError = __webpack_require__(8)
+var createError = __webpack_require__(9)
 var debug = __webpack_require__(0)('send')
 var deprecate = __webpack_require__(3)('send')
 var destroy = __webpack_require__(114)
@@ -3141,14 +3141,14 @@ var encodeUrl = __webpack_require__(17)
 var escapeHtml = __webpack_require__(18)
 var etag = __webpack_require__(53)
 var fresh = __webpack_require__(55)
-var fs = __webpack_require__(6)
+var fs = __webpack_require__(7)
 var mime = __webpack_require__(115)
 var ms = __webpack_require__(36)
 var onFinished = __webpack_require__(16)
 var parseRange = __webpack_require__(56)
 var path = __webpack_require__(2)
 var statuses = __webpack_require__(14)
-var Stream = __webpack_require__(4)
+var Stream = __webpack_require__(5)
 var util = __webpack_require__(25)
 
 /**
@@ -5633,7 +5633,7 @@ var mixin = __webpack_require__(21);
 var debug = __webpack_require__(0)('express:router');
 var deprecate = __webpack_require__(3)('express');
 var flatten = __webpack_require__(19);
-var parseUrl = __webpack_require__(10);
+var parseUrl = __webpack_require__(11);
 var setPrototypeOf = __webpack_require__(29)
 
 /**
@@ -6706,7 +6706,7 @@ function decode_param(val) {
  */
 
 var merge = __webpack_require__(21)
-var parseUrl = __webpack_require__(10);
+var parseUrl = __webpack_require__(11);
 var qs = __webpack_require__(27);
 
 /**
@@ -7286,7 +7286,7 @@ module.exports = etag
  */
 
 var crypto = __webpack_require__(54)
-var Stats = __webpack_require__(6).Stats
+var Stats = __webpack_require__(7).Stats
 
 /**
  * Module variables.
@@ -8196,10 +8196,10 @@ module.exports = memoizeStringOnly;
 
 
 var express = __webpack_require__(62);
-var React = __webpack_require__(11);
+var React = __webpack_require__(4);
 var renderToString = __webpack_require__(135).renderToString;
 var Home = __webpack_require__(142).default;
-var htmlTemplate = __webpack_require__(143);
+var renderPage = __webpack_require__(146);
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -8207,7 +8207,7 @@ app.use(express.static('public'));
 
 app.get('/', function (req, res) {
   var content = renderToString(React.createElement(Home, null));
-  res.send(htmlTemplate(content));
+  res.send(renderPage(content));
 });
 
 app.listen(PORT, function () {
@@ -8673,12 +8673,12 @@ function eventListenerCount (emitter, type) {
  * @private
  */
 
-var bytes = __webpack_require__(7)
+var bytes = __webpack_require__(8)
 var contentType = __webpack_require__(13)
-var createError = __webpack_require__(8)
+var createError = __webpack_require__(9)
 var debug = __webpack_require__(0)('body-parser:json')
 var read = __webpack_require__(15)
-var typeis = __webpack_require__(9)
+var typeis = __webpack_require__(10)
 
 /**
  * Module exports.
@@ -10007,7 +10007,7 @@ function createWritableStdioStream (fd) {
       break;
 
     case 'FILE':
-      var fs = __webpack_require__(6);
+      var fs = __webpack_require__(7);
       stream = new fs.SyncWriteStream(fd, { autoClose: false });
       stream._type = 'fs';
       break;
@@ -10097,8 +10097,8 @@ module.exports = require("tty");
  * @private
  */
 
-var bytes = __webpack_require__(7)
-var createError = __webpack_require__(8)
+var bytes = __webpack_require__(8)
+var createError = __webpack_require__(9)
 var iconv = __webpack_require__(38)
 var unpipe = __webpack_require__(41)
 
@@ -12637,7 +12637,7 @@ module.exports = [["8740","䏰䰲䘃䖦䕸𧉧䵷䖳𧲱䳢𧳅㮕䜶䝄䱇䱀�
 
 
 var Buffer = __webpack_require__(1).Buffer,
-    Transform = __webpack_require__(4).Transform;
+    Transform = __webpack_require__(5).Transform;
 
 
 // == Exports ==================================================================
@@ -12934,7 +12934,7 @@ module.exports = function (iconv) {
 
         // -- Readable -------------------------------------------------------------
         if (iconv.supportsStreams) {
-            var Readable = __webpack_require__(4).Readable;
+            var Readable = __webpack_require__(5).Readable;
 
             original.ReadableSetEncoding = Readable.prototype.setEncoding;
             Readable.prototype.setEncoding = function setEncoding(enc, options) {
@@ -12968,7 +12968,7 @@ module.exports = function (iconv) {
         Buffer.prototype.write = original.BufferWrite;
 
         if (iconv.supportsStreams) {
-            var Readable = __webpack_require__(4).Readable;
+            var Readable = __webpack_require__(5).Readable;
 
             Readable.prototype.setEncoding = original.ReadableSetEncoding;
             delete Readable.prototype.collect;
@@ -13403,10 +13403,10 @@ module.exports = {"application/1d-interleaved-parityfec":{"source":"iana"},"appl
  * Module dependencies.
  */
 
-var bytes = __webpack_require__(7)
+var bytes = __webpack_require__(8)
 var debug = __webpack_require__(0)('body-parser:raw')
 var read = __webpack_require__(15)
-var typeis = __webpack_require__(9)
+var typeis = __webpack_require__(10)
 
 /**
  * Module exports.
@@ -13511,11 +13511,11 @@ function typeChecker (type) {
  * Module dependencies.
  */
 
-var bytes = __webpack_require__(7)
+var bytes = __webpack_require__(8)
 var contentType = __webpack_require__(13)
 var debug = __webpack_require__(0)('body-parser:text')
 var read = __webpack_require__(15)
-var typeis = __webpack_require__(9)
+var typeis = __webpack_require__(10)
 
 /**
  * Module exports.
@@ -13641,13 +13641,13 @@ function typeChecker (type) {
  * @private
  */
 
-var bytes = __webpack_require__(7)
+var bytes = __webpack_require__(8)
 var contentType = __webpack_require__(13)
-var createError = __webpack_require__(8)
+var createError = __webpack_require__(9)
 var debug = __webpack_require__(0)('body-parser:urlencoded')
 var deprecate = __webpack_require__(3)('body-parser')
 var read = __webpack_require__(15)
-var typeis = __webpack_require__(9)
+var typeis = __webpack_require__(10)
 
 /**
  * Module exports.
@@ -14406,9 +14406,9 @@ var query = __webpack_require__(50);
 var debug = __webpack_require__(0)('express:application');
 var View = __webpack_require__(112);
 var http = __webpack_require__(20);
-var compileETag = __webpack_require__(5).compileETag;
-var compileQueryParser = __webpack_require__(5).compileQueryParser;
-var compileTrust = __webpack_require__(5).compileTrust;
+var compileETag = __webpack_require__(6).compileETag;
+var compileQueryParser = __webpack_require__(6).compileQueryParser;
+var compileTrust = __webpack_require__(6).compileTrust;
 var deprecate = __webpack_require__(3)('express');
 var flatten = __webpack_require__(19);
 var merge = __webpack_require__(21);
@@ -15051,7 +15051,7 @@ var debug = __webpack_require__(0)('finalhandler')
 var encodeUrl = __webpack_require__(17)
 var escapeHtml = __webpack_require__(18)
 var onFinished = __webpack_require__(16)
-var parseUrl = __webpack_require__(10)
+var parseUrl = __webpack_require__(11)
 var statuses = __webpack_require__(14)
 var unpipe = __webpack_require__(41)
 
@@ -15574,7 +15574,7 @@ exports.init = function(app){
 
 var debug = __webpack_require__(0)('express:view');
 var path = __webpack_require__(2);
-var fs = __webpack_require__(6);
+var fs = __webpack_require__(7);
 
 /**
  * Module variables.
@@ -15771,8 +15771,8 @@ webpackEmptyContext.id = 113;
  * @private
  */
 
-var ReadStream = __webpack_require__(6).ReadStream
-var Stream = __webpack_require__(4)
+var ReadStream = __webpack_require__(7).ReadStream
+var Stream = __webpack_require__(5)
 
 /**
  * Module exports.
@@ -15840,7 +15840,7 @@ function onOpenClose() {
 /***/ (function(module, exports, __webpack_require__) {
 
 var path = __webpack_require__(2);
-var fs = __webpack_require__(6);
+var fs = __webpack_require__(7);
 
 function Mime() {
   // Map of extension -> mime type
@@ -16720,11 +16720,11 @@ module.exports = function(module) {
 var accepts = __webpack_require__(121);
 var deprecate = __webpack_require__(3)('express');
 var isIP = __webpack_require__(37).isIP;
-var typeis = __webpack_require__(9);
+var typeis = __webpack_require__(10);
 var http = __webpack_require__(20);
 var fresh = __webpack_require__(55);
 var parseRange = __webpack_require__(56);
-var parse = __webpack_require__(10);
+var parse = __webpack_require__(11);
 var proxyaddr = __webpack_require__(57);
 
 /**
@@ -18480,15 +18480,15 @@ var deprecate = __webpack_require__(3)('express');
 var encodeUrl = __webpack_require__(17);
 var escapeHtml = __webpack_require__(18);
 var http = __webpack_require__(20);
-var isAbsolute = __webpack_require__(5).isAbsolute;
+var isAbsolute = __webpack_require__(6).isAbsolute;
 var onFinished = __webpack_require__(16);
 var path = __webpack_require__(2);
 var statuses = __webpack_require__(14)
 var merge = __webpack_require__(21);
 var sign = __webpack_require__(128).sign;
-var normalizeType = __webpack_require__(5).normalizeType;
-var normalizeTypes = __webpack_require__(5).normalizeTypes;
-var setCharset = __webpack_require__(5).setCharset;
+var normalizeType = __webpack_require__(6).normalizeType;
+var normalizeTypes = __webpack_require__(6).normalizeTypes;
+var setCharset = __webpack_require__(6).setCharset;
 var cookie = __webpack_require__(129);
 var send = __webpack_require__(30);
 var extname = path.extname;
@@ -20036,7 +20036,7 @@ function vary (res, field) {
 
 var encodeUrl = __webpack_require__(17)
 var escapeHtml = __webpack_require__(18)
-var parseUrl = __webpack_require__(10)
+var parseUrl = __webpack_require__(11)
 var resolve = __webpack_require__(2).resolve
 var send = __webpack_require__(30)
 var url = __webpack_require__(46)
@@ -21680,7 +21680,7 @@ if (process.env.NODE_ENV === 'production') {
  * LICENSE file in the root directory of this source tree.
  */
 
-var k=__webpack_require__(22),r=__webpack_require__(11),aa=__webpack_require__(12),t=__webpack_require__(23),ba=__webpack_require__(59),ca=__webpack_require__(60),da=__webpack_require__(4);
+var k=__webpack_require__(22),r=__webpack_require__(4),aa=__webpack_require__(12),t=__webpack_require__(23),ba=__webpack_require__(59),ca=__webpack_require__(60),da=__webpack_require__(5);
 function w(a){for(var b=arguments.length-1,g="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)g+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(g+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var x={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function z(a,b){return(a&b)===b}
 var B={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=B,g=a.Properties||{},c=a.DOMAttributeNamespaces||{},h=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in g){C.hasOwnProperty(f)?w("48",f):void 0;var e=f.toLowerCase(),d=g[f];e={attributeName:e,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:z(d,b.MUST_USE_PROPERTY),
@@ -21777,7 +21777,7 @@ if (process.env.NODE_ENV !== "production") {
 
 var invariant = __webpack_require__(31);
 var _assign = __webpack_require__(22);
-var React = __webpack_require__(11);
+var React = __webpack_require__(4);
 var emptyFunction = __webpack_require__(12);
 var emptyObject = __webpack_require__(23);
 var hyphenateStyleName = __webpack_require__(59);
@@ -21785,7 +21785,7 @@ var memoizeStringOnly = __webpack_require__(60);
 var warning = __webpack_require__(32);
 var checkPropTypes = __webpack_require__(58);
 var camelizeStyleName = __webpack_require__(140);
-var stream = __webpack_require__(4);
+var stream = __webpack_require__(5);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -24439,9 +24439,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(11);
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _Header = __webpack_require__(143);
+
+var _Header2 = _interopRequireDefault(_Header);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24449,7 +24453,7 @@ var Home = function Home() {
   return _react2.default.createElement(
     'div',
     null,
-    'Hello'
+    _react2.default.createElement(_Header2.default, null)
   );
 };
 
@@ -24462,17 +24466,226 @@ exports.default = Home;
 "use strict";
 
 
-var _react = __webpack_require__(11);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _NavBar = __webpack_require__(144);
+
+var _NavBar2 = _interopRequireDefault(_NavBar);
+
+var _UserNavBar = __webpack_require__(145);
+
+var _UserNavBar2 = _interopRequireDefault(_UserNavBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header() {
+  return _react2.default.createElement(
+    'header',
+    { className: 'header' },
+    _react2.default.createElement(_NavBar2.default, null),
+    _react2.default.createElement(
+      'div',
+      { className: 'header__container' },
+      _react2.default.createElement(
+        'div',
+        { className: 'header__title' },
+        'EVERLANE'
+      )
+    ),
+    _react2.default.createElement(_UserNavBar2.default, null)
+  );
+};
+
+exports.default = Header;
+
+/***/ }),
+/* 144 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var htmlTemplate = function htmlTemplate(page) {
-  return ' <html>\n    <head>\n    <meta name="viewport" content="width-device-width, initial-scale=1.0"\n    </head>\n    <body>\n    <div id="root">' + page + '</div>\n    <script src="bundle.js"></script>\n    </body>\n    </html>\n  ';
+var NavBar = function NavBar() {
+  return _react2.default.createElement(
+    "nav",
+    { className: "navbar" },
+    _react2.default.createElement(
+      "ul",
+      { className: "navbar__container" },
+      _react2.default.createElement(
+        "li",
+        { className: "navbar__item" },
+        _react2.default.createElement(
+          "a",
+          { className: "navbar__link", href: "#" },
+          _react2.default.createElement(
+            "span",
+            { className: "navbar__text" },
+            "Women"
+          )
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "navbar__item" },
+        _react2.default.createElement(
+          "a",
+          { className: "navbar__link", href: "#" },
+          _react2.default.createElement(
+            "span",
+            { className: "navbar__text" },
+            "Men"
+          )
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "navbar__item" },
+        _react2.default.createElement(
+          "a",
+          { className: "navbar__link", href: "#" },
+          _react2.default.createElement(
+            "span",
+            { className: "navbar__text" },
+            "Visit Us"
+          )
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "navbar__item" },
+        _react2.default.createElement(
+          "a",
+          { className: "navbar__link", href: "#" },
+          _react2.default.createElement(
+            "span",
+            { className: "navbar__text" },
+            "Factories"
+          )
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "navbar__item" },
+        _react2.default.createElement(
+          "a",
+          { className: "navbar__link", href: "#" },
+          _react2.default.createElement(
+            "span",
+            { className: "navbar__text" },
+            "About"
+          )
+        )
+      )
+    )
+  );
 };
 
-module.exports = htmlTemplate;
+exports.default = NavBar;
+
+/***/ }),
+/* 145 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var UserNavBar = function UserNavBar() {
+  return _react2.default.createElement(
+    "nav",
+    { className: "user-navbar" },
+    _react2.default.createElement(
+      "ul",
+      { className: "user-navbar__container" },
+      _react2.default.createElement(
+        "li",
+        { className: "user-navbar__item" },
+        _react2.default.createElement(
+          "a",
+          { href: "#", className: "user-navbar__link" },
+          _react2.default.createElement(
+            "span",
+            { className: "user-navbar__text" },
+            "Log In"
+          )
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "user-navbar__item" },
+        _react2.default.createElement(
+          "a",
+          { href: "#", className: "user-navbar__link" },
+          _react2.default.createElement(
+            "span",
+            { className: "user-navbar__text" },
+            "Sign Up"
+          )
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "user-navbar__item" },
+        _react2.default.createElement(
+          "a",
+          { href: "#", className: "user-navbar__link" },
+          _react2.default.createElement(
+            "span",
+            { className: "user-navbar__text" },
+            "Cart"
+          )
+        )
+      )
+    )
+  );
+};
+
+exports.default = UserNavBar;
+
+/***/ }),
+/* 146 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var renderPage = function renderPage(page) {
+  return ' <!DOCTYPE html>\n    <html>\n    <head>\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <link rel="stylesheet" type="text/css" href="css/style.css" >\n    </head>\n    <body>\n    <div id="root">' + page + '</div>\n    <script src="bundle.js"></script>\n    </body>\n    </html>\n  ';
+};
+
+module.exports = renderPage;
 
 /***/ })
 /******/ ]);
