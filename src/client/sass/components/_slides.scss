@@ -1,0 +1,36 @@
+.slides {
+  &__container {
+  }
+  &__item {
+    height: 85vh;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+
+      &-1 {
+        background-image: url("../img/slide-show-1.jpg");
+        animation: fade1 25s infinite;
+        
+      }
+      &-2 {
+        background-image: url("../img/slide-show-2.jpg");
+        animation: fade2 25s infinite;
+      }
+      &-3 {
+        background-image: url("../img/slide-show-3.jpg");
+        animation: fade3 25s infinite;
+      }
+      &-4 {
+        background-image: url("../img/slide-show-4.jpg");
+        animation: fade4 25s infinite;
+      }
+      &-5 {
+        background-image: url("../img/slide-show-5.jpg");
+        animation: fade5 25s infinite;
+      }
+  }
+}
+
+

@@ -1,0 +1,42 @@
+@keyframes fade1 {
+  0% {@include display-slide ;}
+  20% {@include hide-slide ;}
+  40% {@include hide-slide ;}
+  50% {@include hide-slide ;}
+  80% {@include hide-slide ;}
+  100% {@include display-slide ;}
+ }
+ @keyframes fade2 {
+  0% {@include hide-slide ;}
+  20% {@include display-slide ;}
+  40% {@include hide-slide ;}
+  50% {@include hide-slide ;}
+  80% {@include hide-slide ;}
+  100% {@include hide-slide ;}
+ 
+ }
+ @keyframes fade3 {
+  0% {@include hide-slide ;}
+  20% {@include hide-slide ;}
+  40% {@include display-slide ;}
+  50% {@include hide-slide ;}
+  80% {@include hide-slide ;}
+  100% {@include hide-slide ;}
+ }
+ @keyframes fade4 {
+  0% {@include hide-slide ;}
+  20% {@include hide-slide ;}
+  40% {@include hide-slide ;}
+  50% {@include display-slide ;}
+  80% {@include hide-slide ;}
+  100% {@include hide-slide ;}
+ }
+ @keyframes fade5 {
+  0% {@include hide-slide ;}
+  20% {@include hide-slide ;}
+  40% {@include hide-slide ;}
+  50% {@include hide-slide ;}
+  80% {@include display-slide ;}
+  100% {@include hide-slide ;}
+ }
+ 

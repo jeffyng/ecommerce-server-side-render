@@ -1,0 +1,8 @@
+@mixin display-slide {
+  opacity: 1;
+  display: flex;
+}
+@mixin hide-slide {
+  opacity: 0;
+  display: none;
+}
