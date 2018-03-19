@@ -6,7 +6,7 @@ const Header = () => (
   <header className="header">
     <NavBar />
    <div className="header__container">
-    <div className="header__title">EVERLANE</div>
+    <div className="header__title">EVERJANE</div>
    </div>
    <UserNavBar />
   </header>
