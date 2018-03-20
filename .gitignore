@@ -1,1 +1,4 @@
-**/bundle.js/
+**build/bundle.js/
+*.jpg
+build/
+public/bundle.js

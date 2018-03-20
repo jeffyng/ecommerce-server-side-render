@@ -18283,13 +18283,32 @@ var _Header = __webpack_require__(28);
 
 var _Header2 = _interopRequireDefault(_Header);
 
+var _Slides = __webpack_require__(31);
+
+var _Slides2 = _interopRequireDefault(_Slides);
+
+var _DualImage = __webpack_require__(32);
+
+var _DualImage2 = _interopRequireDefault(_DualImage);
+
+var _TripleImage = __webpack_require__(33);
+
+var _TripleImage2 = _interopRequireDefault(_TripleImage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Home = function Home() {
   return _react2.default.createElement(
     'div',
     null,
-    _react2.default.createElement(_Header2.default, null)
+    _react2.default.createElement(_Header2.default, null),
+    _react2.default.createElement(
+      'div',
+      { className: 'content' },
+      _react2.default.createElement(_Slides2.default, null),
+      _react2.default.createElement(_DualImage2.default, null),
+      _react2.default.createElement(_TripleImage2.default, null)
+    )
   );
 };
 
@@ -18331,7 +18350,7 @@ var Header = function Header() {
       _react2.default.createElement(
         'div',
         { className: 'header__title' },
-        'EVERLANE'
+        'EVERJANE'
       )
     ),
     _react2.default.createElement(_UserNavBar2.default, null)
@@ -18503,6 +18522,274 @@ var UserNavBar = function UserNavBar() {
 };
 
 exports.default = UserNavBar;
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Slides = function Slides() {
+  return _react2.default.createElement(
+    "section",
+    { className: "slides" },
+    _react2.default.createElement(
+      "ul",
+      { className: "slides__container" },
+      _react2.default.createElement(
+        "li",
+        { className: "slides__item slides__item-1" },
+        _react2.default.createElement(
+          "h1",
+          { className: "slides__item-title" },
+          "Silk gets casual."
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: "btn slides__btn", href: "#" },
+          "Shop Now"
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "slides__item slides__item-2" },
+        _react2.default.createElement(
+          "h1",
+          { className: "slides__item-title grey-text" },
+          "The $50 Button-Down"
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: "btn slides__btn", href: "#" },
+          "Shop Now"
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "slides__item slides__item-3" },
+        _react2.default.createElement(
+          "h1",
+          { className: "slides__item-title" },
+          "The Modern Utility Jacket"
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: "btn slides__btn", href: "#" },
+          "Shop Now"
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "slides__item slides__item-4" },
+        _react2.default.createElement(
+          "h1",
+          { className: "slides__item-title" },
+          "Box Cutter"
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: "btn slides__btn", href: "#" },
+          "Shop Now"
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "slides__item slides__item-5" },
+        _react2.default.createElement(
+          "h1",
+          { className: "slides__item-title grey-text" },
+          "A Cooler Tee"
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: "btn slides__btn", href: "#" },
+          "Shop Now"
+        )
+      )
+    )
+  );
+};
+
+exports.default = Slides;
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DualImage = function DualImage() {
+  return _react2.default.createElement(
+    "section",
+    { className: "dual-image" },
+    _react2.default.createElement(
+      "div",
+      { className: "dual-image__container dual-image__container-1" },
+      _react2.default.createElement("img", { className: "dual-image__img", src: "../img/homepage-double-1.jpg", alt: "Wear to Work" }),
+      _react2.default.createElement(
+        "div",
+        { "class": "dual-image__text-block" },
+        _react2.default.createElement(
+          "h2",
+          { className: "dual-image-title" },
+          "Wear to Work"
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: "btn dual-image__btn", href: "#" },
+          "Shop Now"
+        )
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "dual-image__container dual-image__container-2" },
+      _react2.default.createElement("img", { className: "dual-image__img", src: "../img/homepage-double-2.jpg", alt: "#DamnGoodDenim" }),
+      _react2.default.createElement(
+        "div",
+        { className: "dual-image__text-block" },
+        _react2.default.createElement(
+          "h2",
+          { className: "dual-image-title" },
+          "#DamnGoodDenim"
+        ),
+        _react2.default.createElement(
+          "div",
+          { "class": "dual-image__text-block__btn-group" },
+          _react2.default.createElement(
+            "a",
+            { className: "btn dual-image__btn", href: "#" },
+            "Shop Men"
+          ),
+          _react2.default.createElement(
+            "a",
+            { className: "btn dual-image__btn", href: "#" },
+            "Shop Women"
+          )
+        )
+      )
+    )
+  );
+};
+
+exports.default = DualImage;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var TripleImage = function TripleImage() {
+  return _react2.default.createElement(
+    "section",
+    { className: "triple-image" },
+    _react2.default.createElement(
+      "div",
+      { className: "triple-image__container triple-image__container-1" },
+      _react2.default.createElement(
+        "a",
+        { href: "#", className: "" },
+        _react2.default.createElement(
+          "div",
+          { "class": "triple-image__container__text-block" },
+          _react2.default.createElement(
+            "h3",
+            { className: "triple-image__container__text-block-title" },
+            "The Kick Crop"
+          ),
+          _react2.default.createElement(
+            "span",
+            { className: "triple-image__container__text-block-text" },
+            "Shop Now"
+          )
+        ),
+        _react2.default.createElement("img", { className: "triple-image__img", src: "../img/homepage-triple-1.jpg", alt: "The Kick Crop" })
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "triple-image__container triple-image__container-2" },
+      _react2.default.createElement(
+        "a",
+        { href: "#" },
+        _react2.default.createElement(
+          "div",
+          { className: "triple-image__container__text-block" },
+          _react2.default.createElement(
+            "h3",
+            { className: "triple-image__container__text-block-title" },
+            "New Day Heels"
+          ),
+          _react2.default.createElement(
+            "span",
+            { className: "triple-image__container__text-block-text" },
+            "Shop Now"
+          )
+        ),
+        _react2.default.createElement("img", { className: "triple-image__img", src: "../img/homepage-triple-2.jpg", alt: "New Day Heels" })
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "triple-image__container triple-image__container-3" },
+      _react2.default.createElement(
+        "a",
+        { href: "#" },
+        _react2.default.createElement(
+          "div",
+          { "class": "triple-image__container__text-block" },
+          _react2.default.createElement(
+            "h3",
+            { className: "triple-image__container__text-block-title" },
+            "Back in Stock"
+          ),
+          _react2.default.createElement(
+            "span",
+            { className: "triple-image__container__text-block-text" },
+            "Shop Now"
+          )
+        ),
+        _react2.default.createElement("img", { className: "triple-image__img", src: "../img/homepage-triple-3.jpg", alt: "Back in Stock" })
+      )
+    )
+  );
+};
+
+exports.default = TripleImage;
 
 /***/ })
 /******/ ]);
