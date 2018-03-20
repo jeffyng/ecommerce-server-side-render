@@ -1,0 +1,13 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: grey;
+  width: 15rem;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 1.25rem;
+  background-color: rgb(255,255,255);
+  &:hover {
+    cursor: pointer;
+  }
+}

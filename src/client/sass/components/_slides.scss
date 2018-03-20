@@ -1,13 +1,18 @@
 .slides {
-  &__container {
-  }
+  position: relative;
+  height: 85vh;
+  // &__container {
+  // }
   &__item {
     height: 85vh;
     width: 100%;
     background-size: cover;
     position: absolute;
-    top: 10vh;
+    top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
       &-1 {
         background-image: url("../img/slide-show-1.jpg");
@@ -30,6 +35,18 @@
         background-image: url("../img/slide-show-5.jpg");
         animation: fade5 25s infinite;
       }
+      
+      &-title {
+        font-size: 7rem;
+        color: rgb(255, 255, 255)
+      }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 60%;
+    left: 43%;
+
   }
 }
 

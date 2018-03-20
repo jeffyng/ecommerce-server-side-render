@@ -1,6 +1,7 @@
 @import "abstracts/mixins";
 
 @import "base/animations";
+@import "base/utilities";
 @import "base/base";
 @import "base/typography";
 
@@ -10,3 +11,6 @@
 
 @import "components/navbar";
 @import "components/slides";
+@import "components/dual-image";
+@import "components/triple-image";
+@import "components/button";
