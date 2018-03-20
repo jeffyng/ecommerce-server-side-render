@@ -24459,6 +24459,10 @@ var _TripleImage = __webpack_require__(149);
 
 var _TripleImage2 = _interopRequireDefault(_TripleImage);
 
+var _Footer = __webpack_require__(150);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Home = function Home() {
@@ -24471,7 +24475,8 @@ var Home = function Home() {
       { className: 'content' },
       _react2.default.createElement(_Slides2.default, null),
       _react2.default.createElement(_DualImage2.default, null),
-      _react2.default.createElement(_TripleImage2.default, null)
+      _react2.default.createElement(_TripleImage2.default, null),
+      _react2.default.createElement(_Footer2.default, null)
     )
   );
 };
@@ -24973,6 +24978,254 @@ var TripleImage = function TripleImage() {
 };
 
 exports.default = TripleImage;
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _EmailForm = __webpack_require__(151);
+
+var _EmailForm2 = _interopRequireDefault(_EmailForm);
+
+var _FooterNav = __webpack_require__(152);
+
+var _FooterNav2 = _interopRequireDefault(_FooterNav);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  return _react2.default.createElement(
+    'footer',
+    { className: 'footer' },
+    _react2.default.createElement(
+      'div',
+      { className: 'footer__email' },
+      _react2.default.createElement(_EmailForm2.default, null)
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'footer__nav' },
+      _react2.default.createElement(_FooterNav2.default, null)
+    )
+  );
+};
+
+exports.default = Footer;
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var EmailForm = function EmailForm() {
+  return _react2.default.createElement(
+    "form",
+    { className: "email-form" },
+    _react2.default.createElement(
+      "h5",
+      { className: "email-form__heading" },
+      "Exceptional quality. Ethical factories. Radical Transparency. Sign up to enjoy free U.S. shipping and returns on your first order."
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "email-form__input-group" },
+      _react2.default.createElement("input", { className: "email-form__input-group-item", placeholder: "Your email" })
+    )
+  );
+};
+
+exports.default = EmailForm;
+
+/***/ }),
+/* 152 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var FooterNav = function FooterNav() {
+  return _react2.default.createElement(
+    "nav",
+    { className: "footer-nav" },
+    _react2.default.createElement(
+      "ul",
+      { className: "footer-nav__container" },
+      _react2.default.createElement(
+        "li",
+        { className: "footer-nav__section" },
+        _react2.default.createElement(
+          "h6",
+          { className: "footer-nav__header" },
+          "Account"
+        ),
+        _react2.default.createElement(
+          "ul",
+          { className: "footer-nav__links" },
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "Manage Account"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "Saved Items"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "Orders & Returns"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "Redeem a Gift"
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "footer-nav__section" },
+        _react2.default.createElement(
+          "h6",
+          { className: "footer-nav__header" },
+          "Company"
+        ),
+        _react2.default.createElement(
+          "ul",
+          { className: "footer-nav__links" },
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "About"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "Factories"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "Careers"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "Contact & FAQ"
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        "li",
+        { className: "footer-nav__section" },
+        _react2.default.createElement(
+          "h6",
+          { className: "footer-nav__header" },
+          "Connect"
+        ),
+        _react2.default.createElement(
+          "ul",
+          { className: "footer-nav__links" },
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "Instagram"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "Twitter"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            { className: "footer-nav__link-container" },
+            _react2.default.createElement(
+              "a",
+              { className: "footer-nav__link", href: "#" },
+              "Affiliates"
+            )
+          )
+        )
+      )
+    )
+  );
+};
+
+exports.default = FooterNav;
 
 /***/ })
 /******/ ]);
