@@ -301,4 +301,5 @@ html {
   font-size: 1.25rem;
   background-color: white; }
   .btn:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: gainsboro; }
