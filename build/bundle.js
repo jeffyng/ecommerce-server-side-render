@@ -24833,7 +24833,7 @@ var DualImage = function DualImage() {
       _react2.default.createElement("img", { className: "dual-image__img", src: "../img/homepage-double-1.jpg", alt: "Wear to Work" }),
       _react2.default.createElement(
         "div",
-        { "class": "dual-image__text-block" },
+        { className: "dual-image__text-block" },
         _react2.default.createElement(
           "h2",
           { className: "dual-image-title" },
@@ -24860,7 +24860,7 @@ var DualImage = function DualImage() {
         ),
         _react2.default.createElement(
           "div",
-          { "class": "dual-image__text-block__btn-group" },
+          { className: "dual-image__text-block__btn-group" },
           _react2.default.createElement(
             "a",
             { className: "btn dual-image__btn", href: "#" },
@@ -24908,7 +24908,7 @@ var TripleImage = function TripleImage() {
         { href: "#", className: "" },
         _react2.default.createElement(
           "div",
-          { "class": "triple-image__container__text-block" },
+          { className: "triple-image__container__text-block" },
           _react2.default.createElement(
             "h3",
             { className: "triple-image__container__text-block-title" },
@@ -24954,7 +24954,7 @@ var TripleImage = function TripleImage() {
         { href: "#" },
         _react2.default.createElement(
           "div",
-          { "class": "triple-image__container__text-block" },
+          { className: "triple-image__container__text-block" },
           _react2.default.createElement(
             "h3",
             { className: "triple-image__container__text-block-title" },
