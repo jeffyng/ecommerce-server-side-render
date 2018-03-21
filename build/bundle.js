@@ -24525,7 +24525,11 @@ var Header = function Header() {
       _react2.default.createElement(
         'div',
         { className: 'header__title' },
-        'EVERJANE'
+        _react2.default.createElement(
+          'a',
+          { className: 'header__link', href: '/' },
+          'EVERJANE'
+        )
       )
     ),
     _react2.default.createElement(_UserNavBar2.default, null)
@@ -30359,6 +30363,10 @@ var _Header = __webpack_require__(143);
 
 var _Header2 = _interopRequireDefault(_Header);
 
+var _Footer = __webpack_require__(149);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Men = function Men() {
@@ -30366,7 +30374,8 @@ var Men = function Men() {
     'div',
     null,
     _react2.default.createElement(_Header2.default, null),
-    _react2.default.createElement('div', { className: 'content' })
+    _react2.default.createElement('div', { className: 'content' }),
+    _react2.default.createElement(_Footer2.default, null)
   );
 };
 

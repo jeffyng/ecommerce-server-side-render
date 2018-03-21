@@ -4,7 +4,6 @@
   padding-left: 2rem;
   padding-right: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 2px solid rgba(128, 128, 128, 0.2);
 
   &__container {
     position: relative;
@@ -15,15 +14,6 @@
       padding-right: 1.5rem;
     }
 
-    // &-1 {
-    //   justify-content: flex-start;
-    // }
-    // &-2 {
-    //   justify-content: center;
-    // }
-    // &-3 {
-    //   justify-content: flex-end;
-    // }
     &:hover &__text-block-text{
       border-bottom: 2px solid rgb(255,255,255);
     }
