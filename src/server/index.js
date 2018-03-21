@@ -5,11 +5,17 @@ const Home = require('../pages/Home').default;
 const renderPage = require('./utils/renderPage')
 const app = express();
 const PORT = process.env.PORT || 3000;
+const StaticRouter = require('react-router-dom').StaticRouter;
+const Routes = require('../routes/Routes.js').default;
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  const content = renderToString(<Home />);
+app.get('*', (req, res) => {
+  const content = renderToString(
+    <StaticRouter location={req.path} context={{}}>
+      <Routes />
+    </StaticRouter>
+  );
   res.send(renderPage(content));
 });
 

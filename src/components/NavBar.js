@@ -9,7 +9,7 @@ const NavBar = () => (
         </a>
       </li>
       <li className="navbar__item">
-        <a className="navbar__link" href="#">
+        <a className="navbar__link" href="/men">
           <span className="navbar__text">Men</span>
         </a>
       </li>
