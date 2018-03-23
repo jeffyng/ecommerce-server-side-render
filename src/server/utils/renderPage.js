@@ -1,7 +1,7 @@
-
 import React from 'react';
+import serialize from 'serialize-javascript';
 
-const renderPage = (page) => (
+const renderPage = (page, store) => (
   ` <!DOCTYPE html>
     <html>
     <head>
@@ -10,6 +10,7 @@ const renderPage = (page) => (
     </head>
     <body>
     <div id="root">${page}</div>
+    <script>window.INITIAL_STATE = ${serialize(store.getState())}</script>
     <script src="bundle.js"></script>
     </body>
     </html>
