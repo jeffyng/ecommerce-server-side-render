@@ -1,4 +1,5 @@
 export default {
+  FETCH_INITIAL_DATA: 'FETCH_INITIAL_DATA',
   SET_PATH: 'SET_PATH',
   MEN: 'MEN',
   WOMEN: 'WOMEN'

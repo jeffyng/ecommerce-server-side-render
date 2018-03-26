@@ -1,0 +1,19 @@
+.hero {
+  
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  &__image-container {
+    height: 40vh;
+    width: 100%;
+  }
+
+
+  &__image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+

@@ -1,10 +1,10 @@
 .navbar {
-  width: 38rem;
+  // width: 38rem;
 
 }
 
 .user-navbar {
-  width: 33rem;
+  // width: 33rem;
   justify-content: flex-end;
 }
 
@@ -28,10 +28,14 @@
   }
   &__item {
     height: 100%;
-    flex-shrink: 0;
+     flex-shrink: 0;
     &:not(:last-child) {
       margin-right: 3rem;
     }
+  //   &:not(:last-child)::after {
+  //     content: "";
+  //     display: grid;
+   
   }
   
   

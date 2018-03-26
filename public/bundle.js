@@ -24219,6 +24219,14 @@ var _Footer = __webpack_require__(34);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
+var _Hero = __webpack_require__(139);
+
+var _Hero2 = _interopRequireDefault(_Hero);
+
+var _Collections = __webpack_require__(140);
+
+var _Collections2 = _interopRequireDefault(_Collections);
+
 var _reactRedux = __webpack_require__(99);
 
 var _actions = __webpack_require__(124);
@@ -24250,6 +24258,11 @@ var Products = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      var path = this.props.path.slice(1);
+      var data = this.props.initialData;
+      var title = data[path]['hero']['title'];
+      var image = data[path]['hero']['image'];
+      var collections = data[path]['collections'];
       return _react2.default.createElement(
         'div',
         null,
@@ -24257,7 +24270,14 @@ var Products = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'content' },
-          JSON.stringify(this.props.path)
+          _react2.default.createElement(
+            'div',
+            { className: 'products' },
+            _react2.default.createElement(_Hero2.default, null),
+            collections.map(function (collection, index) {
+              return _react2.default.createElement(_Collections2.default, { collectionName: collection.collectionName, products: collection.products, key: index });
+            })
+          )
         ),
         _react2.default.createElement(_Footer2.default, null)
       );
@@ -24272,7 +24292,8 @@ var mapStateToProps = function mapStateToProps(state) {
   // path from state.'path' is from combineReducers
   // path from state.path.'path' is from setPathReducer
   return {
-    path: state.path.path
+    path: state.path.path,
+    initialData: state.initialData
   };
 };
 
@@ -26386,20 +26407,24 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.setPath = undefined;
+exports.fetchInitialData = exports.setPath = undefined;
 
 var _constants = __webpack_require__(125);
 
 var _constants2 = _interopRequireDefault(_constants);
 
+var _setPath = __webpack_require__(135);
+
+var _setPath2 = _interopRequireDefault(_setPath);
+
+var _fetchInitialData = __webpack_require__(136);
+
+var _fetchInitialData2 = _interopRequireDefault(_fetchInitialData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var setPath = exports.setPath = function setPath(path) {
-  return {
-    type: _constants2.default.SET_PATH,
-    payload: path
-  };
-};
+exports.setPath = _setPath2.default;
+exports.fetchInitialData = _fetchInitialData2.default;
 
 /***/ }),
 /* 125 */
@@ -26412,6 +26437,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
+  FETCH_INITIAL_DATA: 'FETCH_INITIAL_DATA',
   SET_PATH: 'SET_PATH',
   MEN: 'MEN',
   WOMEN: 'WOMEN'
@@ -26434,10 +26460,15 @@ var _setPathReducer = __webpack_require__(127);
 
 var _setPathReducer2 = _interopRequireDefault(_setPathReducer);
 
+var _fetchInitialDataReducer = __webpack_require__(137);
+
+var _fetchInitialDataReducer2 = _interopRequireDefault(_fetchInitialDataReducer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootReducer = (0, _redux.combineReducers)({
-  path: _setPathReducer2.default
+  path: _setPathReducer2.default,
+  initialData: _fetchInitialDataReducer2.default
 });
 
 exports.default = rootReducer;
@@ -26467,7 +26498,7 @@ var setPathReducer = function setPathReducer() {
 
   switch (action.type) {
     case _constants2.default.SET_PATH:
-      return _extends({}, state, { path: action.payload });
+      return _extends({}, state, action.payload);
     default:
       return state;
   }
@@ -27034,6 +27065,370 @@ Route.childContextTypes = {
   router: _propTypes2.default.object.isRequired
 };
 exports.default = Route;
+
+/***/ }),
+/* 135 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _constants = __webpack_require__(125);
+
+var _constants2 = _interopRequireDefault(_constants);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var setPath = function setPath(path) {
+  return {
+    type: _constants2.default.SET_PATH,
+    payload: path
+  };
+};
+
+exports.default = setPath;
+
+/***/ }),
+/* 136 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _constants = __webpack_require__(125);
+
+var _constants2 = _interopRequireDefault(_constants);
+
+var _sampleData = __webpack_require__(138);
+
+var _sampleData2 = _interopRequireDefault(_sampleData);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var fetchInitialData = function fetchInitialData() {
+  // initial data will be asyncrhonous later
+  // sample data;
+
+  var data = _sampleData2.default;
+
+  return {
+    type: _constants2.default.FETCH_INITIAL_DATA,
+    payload: data
+  };
+};
+//TODO need to remove sample data when database is set up
+exports.default = fetchInitialData;
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _constants = __webpack_require__(125);
+
+var _constants2 = _interopRequireDefault(_constants);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var fetchInitialDataReducer = function fetchInitialDataReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments[1];
+
+  switch (action.type) {
+    case _constants2.default.FETCH_INITIAL_DATA:
+      return _extends({}, state, action.payload);
+    default:
+      return state;
+  }
+};
+
+exports.default = fetchInitialDataReducer;
+
+/***/ }),
+/* 138 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var data = {
+  men: {
+    hero: { title: 'Men\'s', imageUrl: '../img/hero-men.jpg' },
+    collections: [{
+      collectionName: 'Denim',
+      products: [{
+        productName: 'The Slim Fit Jean',
+        imageUrl: '../img/men-jean-1.jpg',
+        price: '$68',
+        productId: 1,
+        color: 'Dark Indigo'
+      }, {
+        productName: 'The Slim Fit Jean',
+        imageUrl: '../img/men-jean-2.jpg',
+        price: '$68',
+        productId: 2,
+        color: 'Black'
+      }, {
+        productName: 'The Slim Fit Jean',
+        imageUrl: '../img/men-jean-3.jpg',
+        price: '$68',
+        productId: 3,
+        color: 'Mid Blue'
+      }, {
+        productName: 'The Slim Fit Jean',
+        imageUrl: '../img/men-jean-4.jpg',
+        price: '$68',
+        productId: 4,
+        color: 'Black'
+      }, {
+        productName: 'The Slim Fit Jean',
+        imageUrl: '../img/men-jean-5.jpg',
+        price: '$68',
+        productId: 5,
+        color: 'Dark Blue Wash'
+      }]
+    }, {
+      collectionName: 'Tees',
+      products: [{
+        productName: 'The Cotton Crew',
+        imageUrl: '../img/men-tee-1.jpg',
+        price: '$68',
+        productId: 6,
+        color: 'White'
+      }, {
+        productName: 'The Cotton Crew',
+        imageUrl: '../img/men-tee-2.jpg',
+        price: '$68',
+        productId: 7,
+        color: 'True Navy'
+      }, {
+        productName: 'The Cotton Crew',
+        imageUrl: '../img/men-tee-3.jpg',
+        price: '$68',
+        productId: 8,
+        color: 'Heather Grey'
+      }, {
+        productName: 'The Cotton Crew',
+        imageUrl: '../img/men-tee-4.jpg',
+        price: '$68',
+        productId: 9,
+        color: 'Navy'
+      }]
+    }]
+  },
+  women: {
+    hero: { title: 'Women\'s', imageUrl: '../img/hero-women.jpg' },
+    collections: [{
+      collectionName: 'Denim',
+      products: [{
+        productName: 'The Kick Crop Jean',
+        imageUrl: '../img/women-jean-1.jpg',
+        price: '$68',
+        productId: 10,
+        color: 'Black'
+      }, {
+        productName: 'The Kick Crop Jean',
+        imageUrl: '../img/women-jean-2.jpg',
+        price: '$68',
+        productId: 11,
+        color: 'Light Blue Wash'
+      }, {
+        productName: 'The Kick Crop Jean',
+        imageUrl: '../img/women-jean-3.jpg',
+        price: '$68',
+        productId: 12,
+        color: 'Dark Indigo'
+      }, {
+        productName: 'The Kick Crop Jean',
+        imageUrl: '../img/women-jean-4.jpg',
+        price: '$68',
+        productId: 13,
+        color: 'Mid Blue'
+      }, {
+        productName: 'The Kick Crop Jean',
+        imageUrl: '../img/women-jean-5.jpg',
+        price: '$68',
+        productId: 14,
+        color: 'Black'
+      }]
+    }]
+  }
+};
+
+exports.default = data;
+
+/***/ }),
+/* 139 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(99);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Hero = function Hero(props) {
+  var style = {
+    backgroundImage: 'url(' + props.imageUrl + ')'
+  };
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'hero' },
+    _react2.default.createElement(
+      'h2',
+      { className: 'hero__title' },
+      props.title
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'hero__image-container' },
+      _react2.default.createElement('img', { src: props.imageUrl, alt: 'jeans', className: 'hero__image' })
+    )
+  );
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  var path = state.path.path.slice(1);
+  return {
+    title: state['initialData'][path]['hero']['title'],
+    imageUrl: state['initialData'][path]['hero']['imageUrl']
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Hero);
+
+/***/ }),
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Product = __webpack_require__(141);
+
+var _Product2 = _interopRequireDefault(_Product);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Collections = function Collections(props) {
+  return _react2.default.createElement(
+    'section',
+    { className: 'collections' },
+    _react2.default.createElement(
+      'h2',
+      { className: 'collections__header' },
+      props.collectionName
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'collections__container' },
+      props.products.map(function (product) {
+        return _react2.default.createElement(_Product2.default, { product: product, key: product.productId });
+      })
+    )
+  );
+};
+
+exports.default = Collections;
+
+/***/ }),
+/* 141 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Product = function Product(props) {
+  return _react2.default.createElement(
+    "div",
+    { className: "product" },
+    _react2.default.createElement(
+      "div",
+      { className: "product__container" },
+      _react2.default.createElement(
+        "div",
+        { className: "product__image-container" },
+        _react2.default.createElement(
+          "a",
+          { className: "product__image-link", href: "/" },
+          _react2.default.createElement("img", { className: "product__image-img", src: props.product.imageUrl, alt: "" })
+        )
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "product__details" },
+      _react2.default.createElement(
+        "div",
+        { className: "product__details-header-container" },
+        _react2.default.createElement(
+          "h3",
+          { className: "product__details-title" },
+          props.product.productName
+        ),
+        _react2.default.createElement(
+          "span",
+          { className: "product__details-price" },
+          props.product.price
+        )
+      ),
+      _react2.default.createElement(
+        "span",
+        { className: "product__details-color" },
+        props.product.color
+      )
+    )
+  );
+};
+
+exports.default = Product;
 
 /***/ })
 /******/ ]);

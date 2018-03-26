@@ -1,11 +1,10 @@
 import constants from '../constants';
+import  setPath  from './setPath';
+import fetchInitialData from './fetchInitialData';
 
 
-export const setPath = (path) => {
-  return {
-    type: constants.SET_PATH,
-    payload: path
-  }
-};
+
+export {setPath, fetchInitialData};
+
 
 

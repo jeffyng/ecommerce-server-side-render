@@ -1,0 +1,13 @@
+.collections {
+  margin: 3rem 0;
+  &__header {
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 3rem;
+  }
+}
