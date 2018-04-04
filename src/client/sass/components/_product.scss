@@ -42,6 +42,36 @@
     &-color {
       color: rgba(76, 76, 76, 0.7);
       font-size: inherit;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    &-button {
+      &-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      &-btn {
+        background:linear-gradient(45deg, rgb(30, 30, 30), rgb(130, 130, 130));
+        font-size: 1.5rem;
+        color: rgb(255,255,255);
+        width: 40%;
+        border-radius: 3px;
+        line-height: 4rem;
+        font-weight: 300;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+          border: none;
+        }
+        &:hover {
+          transform: translateY(-1.5px);
+        }
+        &:active {
+          transform: translateY(0);
+        }
+      }
     }
     
   }

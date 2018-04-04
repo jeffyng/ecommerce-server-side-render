@@ -18,8 +18,10 @@ const Product = (props) => {
         <h3 className="product__details-title">{props.product.productName}</h3>
         <span className="product__details-price">{props.product.price}</span>
       </div>
-
       <span className="product__details-color">{props.product.color}</span>
+      <div className="product__details-button-container">
+        <button className="product__details-button-btn" >Add to Cart </button>
+      </div>
     </div>
     </div>
   );

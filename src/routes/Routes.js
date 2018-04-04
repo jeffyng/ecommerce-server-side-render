@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from '../pages/Home';
 import Products from '../pages/Products';
+import Cart from '../pages/Cart';
 // import { Route } from 'react-router-dom';
 
 // export default () => (
@@ -24,5 +25,9 @@ export default [
   {
     path: '/women',
     component: Products
+  }, 
+  {
+    path: '/cart',
+    component: Cart
   }
 ];

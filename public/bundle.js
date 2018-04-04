@@ -18545,7 +18545,7 @@ var UserNavBar = function UserNavBar() {
         { className: "user-navbar__item" },
         _react2.default.createElement(
           "a",
-          { href: "#", className: "user-navbar__link" },
+          { href: "/cart", className: "user-navbar__link" },
           _react2.default.createElement(
             "span",
             { className: "user-navbar__text" },
@@ -24169,6 +24169,10 @@ var _Products = __webpack_require__(87);
 
 var _Products2 = _interopRequireDefault(_Products);
 
+var _Cart = __webpack_require__(142);
+
+var _Cart2 = _interopRequireDefault(_Cart);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import { Route } from 'react-router-dom';
@@ -24191,6 +24195,9 @@ exports.default = [{
 }, {
   path: '/women',
   component: _Products2.default
+}, {
+  path: '/cart',
+  component: _Cart2.default
 }];
 
 /***/ }),
@@ -24260,9 +24267,11 @@ var Products = function (_React$Component) {
     value: function render() {
       var path = this.props.path.slice(1);
       var data = this.props.initialData;
-      var title = data[path]['hero']['title'];
-      var image = data[path]['hero']['image'];
-      var collections = data[path]['collections'];
+      // const title = data[path]['hero']['title'];
+      // const image = data[path]['hero']['image'];
+      // const collections = data[path]['collections']
+      var collections = data[path].collections;
+
       return _react2.default.createElement(
         'div',
         null,
@@ -27423,12 +27432,89 @@ var Product = function Product(props) {
         "span",
         { className: "product__details-color" },
         props.product.color
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: "product__details-button-container" },
+        _react2.default.createElement(
+          "button",
+          { className: "product__details-button-btn" },
+          "Add to Cart "
+        )
       )
     )
   );
 };
 
 exports.default = Product;
+
+/***/ }),
+/* 142 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Header = __webpack_require__(28);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Footer = __webpack_require__(34);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _Order = __webpack_require__(143);
+
+var _Order2 = _interopRequireDefault(_Order);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Cart = function Cart() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_Header2.default, null),
+    _react2.default.createElement(
+      'div',
+      { className: 'content' },
+      _react2.default.createElement(_Order2.default, null),
+      _react2.default.createElement(_Footer2.default, null)
+    )
+  );
+};
+
+exports.default = Cart;
+
+/***/ }),
+/* 143 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Order = function Order() {
+  return _react2.default.createElement('div', null);
+};
+
+exports.default = Order;
 
 /***/ })
 /******/ ]);

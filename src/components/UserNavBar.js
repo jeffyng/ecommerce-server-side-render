@@ -14,7 +14,7 @@ const UserNavBar = () => (
         </a>
       </li>
       <li className="user-navbar__item">
-        <a href="#" className="user-navbar__link">
+        <a href="/cart" className="user-navbar__link">
           <span className="user-navbar__text">Cart</span>
         </a>
       </li>

@@ -1,4 +1,5 @@
 **build/bundle.js/
 *.jpg
+**.vscode/
 build/
 public/bundle.js

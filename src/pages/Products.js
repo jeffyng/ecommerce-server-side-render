@@ -21,9 +21,10 @@ class Products extends React.Component {
   render() { 
     const path = this.props.path.slice(1);
     const data = this.props.initialData;
-    const title = data[path]['hero']['title'];
-    const image = data[path]['hero']['image'];
-    const collections = data[path]['collections']
+    // const title = data[path]['hero']['title'];
+    // const image = data[path]['hero']['image'];
+    // const collections = data[path]['collections']
+    const { collections } = data[path];
     return (
       <div>
         <Header />

@@ -150,6 +150,8 @@ html {
     grid-column: 2 / 3;
     text-decoration: none;
     color: inherit; }
+  .header:hover {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
 
 .content {
   padding-top: 10vh;
@@ -418,7 +420,28 @@ html {
     color: rgba(76, 76, 76, 0.7); }
   .product__details-color {
     color: rgba(76, 76, 76, 0.7);
-    font-size: inherit; }
+    font-size: inherit;
+    display: block;
+    margin-bottom: 1rem; }
+  .product__details-button-container {
+    display: flex;
+    justify-content: center; }
+  .product__details-button-btn {
+    background: linear-gradient(45deg, #1e1e1e, #828282);
+    font-size: 1.5rem;
+    color: white;
+    width: 40%;
+    border-radius: 3px;
+    line-height: 4rem;
+    font-weight: 300;
+    cursor: pointer; }
+    .product__details-button-btn:focus {
+      outline: none;
+      border: none; }
+    .product__details-button-btn:hover {
+      transform: translateY(-1.5px); }
+    .product__details-button-btn:active {
+      transform: translateY(0); }
 
 .collections {
   margin: 3rem 0; }
