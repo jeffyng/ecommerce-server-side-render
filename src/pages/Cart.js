@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Order from '../components/Order';
 
+
+
 const Cart = () => {
   return (
     <div>
@@ -14,5 +16,6 @@ const Cart = () => {
   </div>
   )
 };
+
 
 export default Cart;

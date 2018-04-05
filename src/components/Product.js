@@ -1,7 +1,13 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
+import { addToCart } from '../actions';
 
 const Product = (props) => {
+  const addToCart = () => {
+    props.addToCart(props.product) 
+  }
+  
   return (
     <div className="product">
       
@@ -20,12 +26,22 @@ const Product = (props) => {
       </div>
       <span className="product__details-color">{props.product.color}</span>
       <div className="product__details-button-container">
-        <button className="product__details-button-btn" >Add to Cart </button>
+        <button onClick={addToCart} className="product__details-button-btn" >Add to Cart </button>
       </div>
     </div>
     </div>
   );
 }
 
-export default Product;
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (product) => {
+      dispatch(addToCart(product))
+    }
+  }
+}
+
+
+export default connect(null, mapDispatchToProps)(Product);
 
