@@ -7,7 +7,7 @@ const Product = (props) => {
   const addToCart = () => {
     props.addToCart(props.product) 
   }
-  
+
   return (
     <div className="product">
       
@@ -22,11 +22,11 @@ const Product = (props) => {
     <div className="product__details">
       <div className="product__details-header-container">
         <h3 className="product__details-title">{props.product.productName}</h3>
-        <span className="product__details-price">{props.product.price}</span>
+        <span className="product__details-price">{'$' + props.product.price}</span>
       </div>
       <span className="product__details-color">{props.product.color}</span>
       <div className="product__details-button-container">
-        <button onClick={addToCart} className="product__details-button-btn" >Add to Cart </button>
+        <button onClick={addToCart} className="product__details-button-btn" >Add to Cart</button>
       </div>
     </div>
     </div>

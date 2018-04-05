@@ -1,6 +1,7 @@
 import React from 'react';
 
-const UserNavBar = () => (
+const UserNavBar = () => {
+  return (
   <nav className="user-navbar">
     <ul className="user-navbar__container">
       <li className="user-navbar__item">
@@ -14,12 +15,15 @@ const UserNavBar = () => (
         </a>
       </li>
       <li className="user-navbar__item">
-        <a href="/cart" className="user-navbar__link">
+        <a href='/cart' className="user-navbar__link">
           <span className="user-navbar__text">Cart</span>
         </a>
       </li>
     </ul>
   </nav>
-);
+)
+};
+
+
 
 export default UserNavBar;

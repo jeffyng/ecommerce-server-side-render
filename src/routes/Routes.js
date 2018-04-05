@@ -28,6 +28,6 @@ export default [
   }, 
   {
     path: '/cart',
-    component: Cart
+    component: Cart,
   }
 ];

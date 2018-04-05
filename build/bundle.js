@@ -33027,7 +33027,7 @@ var Product = function Product(props) {
         _react2.default.createElement(
           'span',
           { className: 'product__details-price' },
-          props.product.price
+          '$' + props.product.price
         )
       ),
       _react2.default.createElement(
@@ -33041,7 +33041,7 @@ var Product = function Product(props) {
         _react2.default.createElement(
           'button',
           { onClick: addToCart, className: 'product__details-button-btn' },
-          'Add to Cart '
+          'Add to Cart'
         )
       )
     )
@@ -33137,31 +33137,31 @@ var data = {
       products: [{
         productName: 'The Slim Fit Jean',
         imageUrl: '../img/men-jean-1.jpg',
-        price: '$68',
+        price: 68,
         productId: 1,
         color: 'Dark Indigo'
       }, {
         productName: 'The Slim Fit Jean',
         imageUrl: '../img/men-jean-2.jpg',
-        price: '$68',
+        price: 68,
         productId: 2,
         color: 'Black'
       }, {
         productName: 'The Slim Fit Jean',
         imageUrl: '../img/men-jean-3.jpg',
-        price: '$68',
+        price: 68,
         productId: 3,
         color: 'Mid Blue'
       }, {
         productName: 'The Slim Fit Jean',
         imageUrl: '../img/men-jean-4.jpg',
-        price: '$68',
+        price: 68,
         productId: 4,
         color: 'Black'
       }, {
         productName: 'The Slim Fit Jean',
         imageUrl: '../img/men-jean-5.jpg',
-        price: '$68',
+        price: 68,
         productId: 5,
         color: 'Dark Blue Wash'
       }]
@@ -33170,25 +33170,25 @@ var data = {
       products: [{
         productName: 'The Cotton Crew',
         imageUrl: '../img/men-tee-1.jpg',
-        price: '$68',
+        price: 68,
         productId: 6,
         color: 'White'
       }, {
         productName: 'The Cotton Crew',
         imageUrl: '../img/men-tee-2.jpg',
-        price: '$68',
+        price: 68,
         productId: 7,
         color: 'True Navy'
       }, {
         productName: 'The Cotton Crew',
         imageUrl: '../img/men-tee-3.jpg',
-        price: '$68',
+        price: 68,
         productId: 8,
         color: 'Heather Grey'
       }, {
         productName: 'The Cotton Crew',
         imageUrl: '../img/men-tee-4.jpg',
-        price: '$68',
+        price: 68,
         productId: 9,
         color: 'Navy'
       }]
@@ -33201,31 +33201,31 @@ var data = {
       products: [{
         productName: 'The Kick Crop Jean',
         imageUrl: '../img/women-jean-1.jpg',
-        price: '$68',
+        price: 68,
         productId: 10,
         color: 'Black'
       }, {
         productName: 'The Kick Crop Jean',
         imageUrl: '../img/women-jean-2.jpg',
-        price: '$68',
+        price: 68,
         productId: 11,
         color: 'Light Blue Wash'
       }, {
         productName: 'The Kick Crop Jean',
         imageUrl: '../img/women-jean-3.jpg',
-        price: '$68',
+        price: 68,
         productId: 12,
         color: 'Dark Indigo'
       }, {
         productName: 'The Kick Crop Jean',
         imageUrl: '../img/women-jean-4.jpg',
-        price: '$68',
+        price: 68,
         productId: 13,
         color: 'Mid Blue'
       }, {
         productName: 'The Kick Crop Jean',
         imageUrl: '../img/women-jean-5.jpg',
-        price: '$68',
+        price: 68,
         productId: 14,
         color: 'Black'
       }]
@@ -33290,7 +33290,7 @@ var _Order2 = _interopRequireDefault(_Order);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Cart = function Cart() {
+var Cart = function Cart(props) {
   return _react2.default.createElement(
     'div',
     null,
@@ -33323,10 +33323,27 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(21);
 
+var _OrderSummary = __webpack_require__(262);
+
+var _OrderSummary2 = _interopRequireDefault(_OrderSummary);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Order = function Order(props) {
-  return _react2.default.createElement('div', null);
+  return _react2.default.createElement(
+    'div',
+    { className: 'order' },
+    _react2.default.createElement(
+      'div',
+      { className: 'order__container' },
+      _react2.default.createElement(
+        'div',
+        null,
+        'asfsfsfasffasfsaf'
+      ),
+      _react2.default.createElement(_OrderSummary2.default, null)
+    )
+  );
 };
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -33960,6 +33977,74 @@ Route.childContextTypes = {
   router: _propTypes2.default.object.isRequired
 };
 exports.default = Route;
+
+/***/ }),
+/* 262 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(21);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var OrderSummary = function OrderSummary(props) {
+  var items = props.cart || [];
+  var sum = items.reduce(function (total, item) {
+    return total + item.price;
+  }, 0) || 0;
+  return _react2.default.createElement(
+    'div',
+    { className: 'order-summary' },
+    _react2.default.createElement(
+      'div',
+      { className: 'order-summary__container' },
+      _react2.default.createElement(
+        'div',
+        { className: 'order-summary__title' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'order-summary__title-header' },
+          'Order Summary'
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'order-summary__details' },
+        _react2.default.createElement(
+          'span',
+          { className: 'order-summary__subtotal' },
+          'Subtotal'
+        ),
+        _react2.default.createElement(
+          'span',
+          { className: 'order-summary__amount' },
+          '$' + sum
+        )
+      )
+    ),
+    _react2.default.createElement(
+      'button',
+      { className: 'order-summary__button' },
+      'CONTINUE TO CHECKOUT'
+    )
+  );
+};
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    cart: state.cart
+  };
+};
+exports.default = (0, _reactRedux.connect)(mapStateToProps, null)(OrderSummary);
 
 /***/ })
 /******/ ]);

@@ -5,7 +5,7 @@ import Order from '../components/Order';
 
 
 
-const Cart = () => {
+const Cart = (props) => {
   return (
     <div>
     <Header />

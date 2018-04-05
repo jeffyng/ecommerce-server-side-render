@@ -17,7 +17,7 @@ app.use(express.static('public'));
 
 app.get('*', (req, res) => {
   const store = createStore(req.path);
-
+ 
   matchRoutes(Routes, req.path)
 
   const content = renderToString(
