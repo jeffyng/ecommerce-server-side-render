@@ -8,15 +8,16 @@
 From within the root directory:
 
 ```sh
-npm install 
+npm install                         // installs dependencies from package.json
 webpack --config webpack.server.js  // build server bundle.js
 webpack --config webpack.client.js  // build client bundle.js
-node build/bundle.js
+node build/bundle.js                // starts node.js/express server
 
 ```
-Need to download images inside of /public/img folder.
-Image filename and path needs to match all html img tag src. 
-Go To localhost:3000
+Note:
+1. Need to import images to /public/img folder.
+2. All image filename and path needs to match the src in HTML img tag.
+3. Go to localhost:3000 in browser
 
 
 
