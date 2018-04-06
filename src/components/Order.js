@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import OrderSummary from './OrderSummary';
+import OrderList from './OrderList';
 
 const Order = (props) => {
   return (
     <div className='order'>
       <div className='order__container'>
-        <div>asfsfsfasffasfsaf</div>
+        <OrderList />
         <OrderSummary />
       </div>
     </div>

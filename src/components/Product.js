@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { addToCart } from '../actions';
 
 const Product = (props) => {
+  console.log(props)
   const addToCart = () => {
     props.addToCart(props.product) 
   }

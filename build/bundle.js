@@ -32993,6 +32993,7 @@ var _actions = __webpack_require__(54);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Product = function Product(props) {
+  console.log(props);
   var addToCart = function addToCart() {
     props.addToCart(props.product);
   };
@@ -33327,6 +33328,10 @@ var _OrderSummary = __webpack_require__(262);
 
 var _OrderSummary2 = _interopRequireDefault(_OrderSummary);
 
+var _OrderList = __webpack_require__(263);
+
+var _OrderList2 = _interopRequireDefault(_OrderList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Order = function Order(props) {
@@ -33336,11 +33341,7 @@ var Order = function Order(props) {
     _react2.default.createElement(
       'div',
       { className: 'order__container' },
-      _react2.default.createElement(
-        'div',
-        null,
-        'asfsfsfasffasfsaf'
-      ),
+      _react2.default.createElement(_OrderList2.default, null),
       _react2.default.createElement(_OrderSummary2.default, null)
     )
   );
@@ -34045,6 +34046,33 @@ var mapStateToProps = function mapStateToProps(state) {
   };
 };
 exports.default = (0, _reactRedux.connect)(mapStateToProps, null)(OrderSummary);
+
+/***/ }),
+/* 263 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var OrderList = function OrderList() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'order-list' },
+    _react2.default.createElement('ul', { className: 'order-list__container' })
+  );
+};
+
+exports.default = OrderList;
 
 /***/ })
 /******/ ]);
