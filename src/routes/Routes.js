@@ -2,6 +2,7 @@ import React from 'react';
 import Home from '../pages/Home';
 import Products from '../pages/Products';
 import Cart from '../pages/Cart';
+import VisitUs from '../pages/VisitUs';
 // import { Route } from 'react-router-dom';
 
 // export default () => (
@@ -26,6 +27,10 @@ export default [
     path: '/women',
     component: Products
   }, 
+  {
+    path: '/visit',
+    component: VisitUs
+  },
   {
     path: '/cart',
     component: Cart,

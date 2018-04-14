@@ -14,7 +14,7 @@ const NavBar = () => (
         </a>
       </li>
       <li className="navbar__item">
-        <a className="navbar__link" href="#">
+        <a className="navbar__link" href="/visit">
           <span className="navbar__text">Visit Us</span>
         </a>
       </li>
