@@ -1,13 +1,12 @@
 import { combineReducers } from 'redux';
 import setPathReducer from './setPathReducer';
 import fetchInitialDataReducer from './fetchInitialDataReducer';
-import addToCartReducer from './addToCartReducer';
-
+import adjustCartReducer from './adjustCartReducer';
 
 const rootReducer = combineReducers({
   path: setPathReducer,
   initialData: fetchInitialDataReducer,
-  cart: addToCartReducer
+  cart: adjustCartReducer
 });
 
 export default rootReducer;

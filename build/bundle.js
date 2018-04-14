@@ -1170,7 +1170,8 @@ exports.default = {
   SET_PATH: 'SET_PATH',
   MEN: 'MEN',
   WOMEN: 'WOMEN',
-  ADD_TO_CART: 'ADD_TO_CART'
+  ADD_TO_CART: 'ADD_TO_CART',
+  REMOVE_FROM_CART: 'REMOVE_FROM_CART'
 };
 
 /***/ }),
@@ -1181,6 +1182,25 @@ module.exports = require("fs");
 
 /***/ }),
 /* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(223);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
+
+
+
+
+
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1346,7 +1366,7 @@ function parse(val) {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1613,7 +1633,7 @@ function toIdentifier (str) {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1882,7 +1902,7 @@ function tryNormalizeType (value) {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2043,7 +2063,7 @@ function fresh (url, parsedUrl) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2140,7 +2160,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2199,7 +2219,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2266,7 +2286,7 @@ var createPath = exports.createPath = function createPath(location) {
 };
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2335,25 +2355,6 @@ var createPath = function createPath(location) {
 
   return path;
 };
-
-/***/ }),
-/* 21 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(223);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
-
-
-
-
-
 
 /***/ }),
 /* 22 */
@@ -2722,7 +2723,7 @@ function status (code) {
  * @private
  */
 
-var createError = __webpack_require__(14)
+var createError = __webpack_require__(15)
 var getBody = __webpack_require__(119)
 var iconv = __webpack_require__(61)
 var onFinished = __webpack_require__(25)
@@ -3453,7 +3454,7 @@ module.exports = warning;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(21);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -3672,7 +3673,7 @@ function mixinProperties(obj, proto) {
  * @private
  */
 
-var createError = __webpack_require__(14)
+var createError = __webpack_require__(15)
 var debug = __webpack_require__(4)('send')
 var deprecate = __webpack_require__(7)('send')
 var destroy = __webpack_require__(155)
@@ -4805,7 +4806,7 @@ function setHeaders (res, headers) {
 
 
 if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(18);
+  var invariant = __webpack_require__(19);
   var warning = __webpack_require__(32);
   var ReactPropTypesSecret = __webpack_require__(42);
   var loggedTypeFailures = {};
@@ -4988,7 +4989,7 @@ var _valueEqual = __webpack_require__(85);
 
 var _valueEqual2 = _interopRequireDefault(_valueEqual);
 
-var _PathUtils = __webpack_require__(19);
+var _PathUtils = __webpack_require__(20);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5581,7 +5582,7 @@ function isPlainObject(value) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.addToCart = exports.fetchInitialData = exports.setPath = undefined;
+exports.adjustCart = exports.fetchInitialData = exports.setPath = undefined;
 
 var _constants = __webpack_require__(11);
 
@@ -5595,15 +5596,15 @@ var _fetchInitialData = __webpack_require__(247);
 
 var _fetchInitialData2 = _interopRequireDefault(_fetchInitialData);
 
-var _addToCart = __webpack_require__(249);
+var _adjustCart = __webpack_require__(265);
 
-var _addToCart2 = _interopRequireDefault(_addToCart);
+var _adjustCart2 = _interopRequireDefault(_adjustCart);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.setPath = _setPath2.default;
 exports.fetchInitialData = _fetchInitialData2.default;
-exports.addToCart = _addToCart2.default;
+exports.adjustCart = _adjustCart2.default;
 
 /***/ }),
 /* 55 */
@@ -6943,7 +6944,7 @@ var mixin = __webpack_require__(30);
 var debug = __webpack_require__(4)('express:router');
 var deprecate = __webpack_require__(7)('express');
 var flatten = __webpack_require__(28);
-var parseUrl = __webpack_require__(16);
+var parseUrl = __webpack_require__(17);
 var setPrototypeOf = __webpack_require__(39)
 
 /**
@@ -8016,7 +8017,7 @@ function decode_param(val) {
  */
 
 var merge = __webpack_require__(30)
-var parseUrl = __webpack_require__(16);
+var parseUrl = __webpack_require__(17);
 var qs = __webpack_require__(37);
 
 /**
@@ -11283,9 +11284,9 @@ function verifyPlainObject(value, displayName, methodName) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__matchRoutes__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__matchRoutes__ = __webpack_require__(259);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchRoutes", function() { return __WEBPACK_IMPORTED_MODULE_0__matchRoutes__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__renderRoutes__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__renderRoutes__ = __webpack_require__(261);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "renderRoutes", function() { return __WEBPACK_IMPORTED_MODULE_1__renderRoutes__["a"]; });
 
 
@@ -11308,8 +11309,8 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 var StaticRouter = __webpack_require__(191).StaticRouter;
 var Routes = __webpack_require__(218).default;
-var Provider = __webpack_require__(21).Provider;
-var createStore = __webpack_require__(252).default;
+var Provider = __webpack_require__(13).Provider;
+var createStore = __webpack_require__(254).default;
 var renderRoutes = __webpack_require__(101).renderRoutes;
 var matchRoutes = __webpack_require__(101).matchRoutes;
 
@@ -11799,12 +11800,12 @@ function eventListenerCount (emitter, type) {
  * @private
  */
 
-var bytes = __webpack_require__(13)
+var bytes = __webpack_require__(14)
 var contentType = __webpack_require__(22)
-var createError = __webpack_require__(14)
+var createError = __webpack_require__(15)
 var debug = __webpack_require__(4)('body-parser:json')
 var read = __webpack_require__(24)
-var typeis = __webpack_require__(15)
+var typeis = __webpack_require__(16)
 
 /**
  * Module exports.
@@ -13223,8 +13224,8 @@ module.exports = require("tty");
  * @private
  */
 
-var bytes = __webpack_require__(13)
-var createError = __webpack_require__(14)
+var bytes = __webpack_require__(14)
+var createError = __webpack_require__(15)
 var iconv = __webpack_require__(61)
 var unpipe = __webpack_require__(64)
 
@@ -16529,10 +16530,10 @@ module.exports = {"application/1d-interleaved-parityfec":{"source":"iana"},"appl
  * Module dependencies.
  */
 
-var bytes = __webpack_require__(13)
+var bytes = __webpack_require__(14)
 var debug = __webpack_require__(4)('body-parser:raw')
 var read = __webpack_require__(24)
-var typeis = __webpack_require__(15)
+var typeis = __webpack_require__(16)
 
 /**
  * Module exports.
@@ -16637,11 +16638,11 @@ function typeChecker (type) {
  * Module dependencies.
  */
 
-var bytes = __webpack_require__(13)
+var bytes = __webpack_require__(14)
 var contentType = __webpack_require__(22)
 var debug = __webpack_require__(4)('body-parser:text')
 var read = __webpack_require__(24)
-var typeis = __webpack_require__(15)
+var typeis = __webpack_require__(16)
 
 /**
  * Module exports.
@@ -16767,13 +16768,13 @@ function typeChecker (type) {
  * @private
  */
 
-var bytes = __webpack_require__(13)
+var bytes = __webpack_require__(14)
 var contentType = __webpack_require__(22)
-var createError = __webpack_require__(14)
+var createError = __webpack_require__(15)
 var debug = __webpack_require__(4)('body-parser:urlencoded')
 var deprecate = __webpack_require__(7)('body-parser')
 var read = __webpack_require__(24)
-var typeis = __webpack_require__(15)
+var typeis = __webpack_require__(16)
 
 /**
  * Module exports.
@@ -18177,7 +18178,7 @@ var debug = __webpack_require__(4)('finalhandler')
 var encodeUrl = __webpack_require__(26)
 var escapeHtml = __webpack_require__(27)
 var onFinished = __webpack_require__(25)
-var parseUrl = __webpack_require__(16)
+var parseUrl = __webpack_require__(17)
 var statuses = __webpack_require__(23)
 var unpipe = __webpack_require__(64)
 
@@ -19846,11 +19847,11 @@ module.exports = function(module) {
 var accepts = __webpack_require__(162);
 var deprecate = __webpack_require__(7)('express');
 var isIP = __webpack_require__(60).isIP;
-var typeis = __webpack_require__(15);
+var typeis = __webpack_require__(16);
 var http = __webpack_require__(29);
 var fresh = __webpack_require__(78);
 var parseRange = __webpack_require__(79);
-var parse = __webpack_require__(16);
+var parse = __webpack_require__(17);
 var proxyaddr = __webpack_require__(80);
 
 /**
@@ -23162,7 +23163,7 @@ function vary (res, field) {
 
 var encodeUrl = __webpack_require__(26)
 var escapeHtml = __webpack_require__(27)
-var parseUrl = __webpack_require__(16)
+var parseUrl = __webpack_require__(17)
 var resolve = __webpack_require__(6).resolve
 var send = __webpack_require__(40)
 var url = __webpack_require__(69)
@@ -23371,7 +23372,7 @@ function createRedirectDirectoryListener () {
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(17),n=__webpack_require__(31),p=__webpack_require__(10),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.portal"):60106,u=q?Symbol["for"]("react.fragment"):60107,v=q?Symbol["for"]("react.strict_mode"):60108,w=q?Symbol["for"]("react.provider"):60109,x=q?Symbol["for"]("react.context"):60110,y=q?Symbol["for"]("react.async_mode"):60111,z=q?Symbol["for"]("react.forward_ref"):60112,A="function"===
+var m=__webpack_require__(18),n=__webpack_require__(31),p=__webpack_require__(10),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.portal"):60106,u=q?Symbol["for"]("react.fragment"):60107,v=q?Symbol["for"]("react.strict_mode"):60108,w=q?Symbol["for"]("react.provider"):60109,x=q?Symbol["for"]("react.context"):60110,y=q?Symbol["for"]("react.async_mode"):60111,z=q?Symbol["for"]("react.forward_ref"):60112,A="function"===
 typeof Symbol&&Symbol.iterator;function B(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var C={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function D(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||C}D.prototype.isReactComponent={};D.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?B("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};D.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};function E(){}
 E.prototype=D.prototype;function F(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||C}var G=F.prototype=new E;G.constructor=F;m(G,D.prototype);G.isPureReactComponent=!0;var H={current:null},I=Object.prototype.hasOwnProperty,J={key:!0,ref:!0,__self:!0,__source:!0};
@@ -23408,9 +23409,9 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(17);
+var _assign = __webpack_require__(18);
 var emptyObject = __webpack_require__(31);
-var invariant = __webpack_require__(18);
+var invariant = __webpack_require__(19);
 var warning = __webpack_require__(32);
 var emptyFunction = __webpack_require__(10);
 var checkPropTypes = __webpack_require__(41);
@@ -24840,7 +24841,7 @@ if (process.env.NODE_ENV === 'production') {
  * LICENSE file in the root directory of this source tree.
  */
 
-var k=__webpack_require__(17),r=__webpack_require__(0),aa=__webpack_require__(10),t=__webpack_require__(31),ba=__webpack_require__(81),ca=__webpack_require__(82),da=__webpack_require__(8);
+var k=__webpack_require__(18),r=__webpack_require__(0),aa=__webpack_require__(10),t=__webpack_require__(31),ba=__webpack_require__(81),ca=__webpack_require__(82),da=__webpack_require__(8);
 function w(a){for(var b=arguments.length-1,g="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)g+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(g+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var x={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function z(a,b){return(a&b)===b}
 var B={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=B,g=a.Properties||{},c=a.DOMAttributeNamespaces||{},h=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in g){C.hasOwnProperty(f)?w("48",f):void 0;var e=f.toLowerCase(),d=g[f];e={attributeName:e,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:z(d,b.MUST_USE_PROPERTY),
@@ -24935,8 +24936,8 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var invariant = __webpack_require__(18);
-var _assign = __webpack_require__(17);
+var invariant = __webpack_require__(19);
+var _assign = __webpack_require__(18);
 var React = __webpack_require__(0);
 var emptyFunction = __webpack_require__(10);
 var emptyObject = __webpack_require__(31);
@@ -28512,9 +28513,9 @@ BrowserRouter.propTypes = {
 
 
 var emptyFunction = __webpack_require__(10);
-var invariant = __webpack_require__(18);
+var invariant = __webpack_require__(19);
 var warning = __webpack_require__(32);
-var assign = __webpack_require__(17);
+var assign = __webpack_require__(18);
 
 var ReactPropTypesSecret = __webpack_require__(42);
 var checkPropTypes = __webpack_require__(41);
@@ -29061,7 +29062,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 var emptyFunction = __webpack_require__(10);
-var invariant = __webpack_require__(18);
+var invariant = __webpack_require__(19);
 var ReactPropTypesSecret = __webpack_require__(42);
 
 module.exports = function() {
@@ -29134,7 +29135,7 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _LocationUtils = __webpack_require__(45);
 
-var _PathUtils = __webpack_require__(19);
+var _PathUtils = __webpack_require__(20);
 
 var _createTransitionManager = __webpack_require__(46);
 
@@ -29511,7 +29512,7 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _LocationUtils = __webpack_require__(45);
 
-var _PathUtils = __webpack_require__(19);
+var _PathUtils = __webpack_require__(20);
 
 var _createTransitionManager = __webpack_require__(46);
 
@@ -29915,7 +29916,7 @@ var _warning = __webpack_require__(1);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _PathUtils = __webpack_require__(19);
+var _PathUtils = __webpack_require__(20);
 
 var _LocationUtils = __webpack_require__(45);
 
@@ -30399,7 +30400,7 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(33);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(21);
 /* unused harmony reexport parsePath */
 /* unused harmony reexport createPath */
 
@@ -30422,7 +30423,7 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(91);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -30726,7 +30727,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(91);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -31044,7 +31045,7 @@ var createHashHistory = function createHashHistory() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(50);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -31229,7 +31230,7 @@ var createMemoryHistory = function createMemoryHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(48);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -31658,7 +31659,7 @@ var _Collections = __webpack_require__(244);
 
 var _Collections2 = _interopRequireDefault(_Collections);
 
-var _reactRedux = __webpack_require__(21);
+var _reactRedux = __webpack_require__(13);
 
 var _actions = __webpack_require__(54);
 
@@ -31757,7 +31758,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(21);
+var _reactRedux = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32986,14 +32987,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(21);
+var _reactRedux = __webpack_require__(13);
 
 var _actions = __webpack_require__(54);
+
+var _constants = __webpack_require__(11);
+
+var _constants2 = _interopRequireDefault(_constants);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Product = function Product(props) {
-  console.log(props);
   var addToCart = function addToCart() {
     props.addToCart(props.product);
   };
@@ -33052,7 +33056,9 @@ var Product = function Product(props) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     addToCart: function addToCart(product) {
-      dispatch((0, _actions.addToCart)(product));
+      // adjustCart is an action 
+      // adjustCart(action type, payload)
+      dispatch((0, _actions.adjustCart)(_constants2.default.ADD_TO_CART, product));
     }
   };
 };
@@ -33237,32 +33243,7 @@ var data = {
 exports.default = data;
 
 /***/ }),
-/* 249 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _constants = __webpack_require__(11);
-
-var _constants2 = _interopRequireDefault(_constants);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var addToCart = function addToCart(product) {
-  return {
-    type: _constants2.default.ADD_TO_CART,
-    payload: product
-  };
-};
-
-exports.default = addToCart;
-
-/***/ }),
+/* 249 */,
 /* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33322,13 +33303,13 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(21);
+var _reactRedux = __webpack_require__(13);
 
-var _OrderSummary = __webpack_require__(262);
+var _OrderSummary = __webpack_require__(252);
 
 var _OrderSummary2 = _interopRequireDefault(_OrderSummary);
 
-var _OrderList = __webpack_require__(263);
+var _OrderList = __webpack_require__(253);
 
 var _OrderList2 = _interopRequireDefault(_OrderList);
 
@@ -33366,9 +33347,174 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(13);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var OrderSummary = function OrderSummary(props) {
+  var items = props.cart || [];
+  var sum = items.reduce(function (total, item) {
+    return total + item.price;
+  }, 0) || 0;
+  return _react2.default.createElement(
+    'div',
+    { className: 'order-summary' },
+    _react2.default.createElement(
+      'div',
+      { className: 'order-summary__container' },
+      _react2.default.createElement(
+        'div',
+        { className: 'order-summary__title' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'order-summary__title-header' },
+          'Order Summary'
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'order-summary__details' },
+        _react2.default.createElement(
+          'span',
+          { className: 'order-summary__subtotal' },
+          'Subtotal'
+        ),
+        _react2.default.createElement(
+          'span',
+          { className: 'order-summary__amount' },
+          '$' + sum
+        )
+      )
+    ),
+    _react2.default.createElement(
+      'button',
+      { className: 'order-summary__button' },
+      'CONTINUE TO CHECKOUT'
+    )
+  );
+};
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    cart: state.cart
+  };
+};
+exports.default = (0, _reactRedux.connect)(mapStateToProps, null)(OrderSummary);
+
+/***/ }),
+/* 253 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(13);
+
+var _actions = __webpack_require__(54);
+
+var _constants = __webpack_require__(11);
+
+var _constants2 = _interopRequireDefault(_constants);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var OrderList = function OrderList(props) {
+  var removeFromCart = function removeFromCart(index) {
+    props.removeFromCart(index);
+  };
+  return _react2.default.createElement(
+    'div',
+    { className: 'order-list' },
+    _react2.default.createElement(
+      'ul',
+      { className: 'order-list__container' },
+      props.cart.map(function (product, index) {
+        return _react2.default.createElement(
+          'li',
+          { className: 'order-list__item', key: index },
+          _react2.default.createElement(
+            'div',
+            { className: 'order-list__item-img-container' },
+            _react2.default.createElement('img', { className: 'order-list__item-img', src: product.imageUrl }),
+            _react2.default.createElement(
+              'div',
+              { className: 'order-list__item-button-container' },
+              _react2.default.createElement(
+                'button',
+                { onClick: function onClick() {
+                    removeFromCart(index);
+                  }, className: 'order-list__item-remove-button' },
+                'Remove'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'order-list__item-details' },
+            _react2.default.createElement(
+              'h3',
+              { className: 'order-list__item-title' },
+              product.productName
+            ),
+            _react2.default.createElement(
+              'span',
+              { className: 'order-list__item-color' },
+              product.color
+            ),
+            _react2.default.createElement(
+              'span',
+              { className: 'order-list__item-price' },
+              '$',
+              product.price
+            )
+          )
+        );
+      })
+    )
+  );
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    cart: state.cart
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    removeFromCart: function removeFromCart(index) {
+      dispatch((0, _actions.adjustCart)(_constants2.default.REMOVE_FROM_CART, index));
+    }
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(OrderList);
+
+/***/ }),
+/* 254 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _redux = __webpack_require__(52);
 
-var _reducers = __webpack_require__(253);
+var _reducers = __webpack_require__(255);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -33384,7 +33530,7 @@ exports.default = function (path) {
 };
 
 /***/ }),
-/* 253 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33396,30 +33542,30 @@ Object.defineProperty(exports, "__esModule", {
 
 var _redux = __webpack_require__(52);
 
-var _setPathReducer = __webpack_require__(254);
+var _setPathReducer = __webpack_require__(256);
 
 var _setPathReducer2 = _interopRequireDefault(_setPathReducer);
 
-var _fetchInitialDataReducer = __webpack_require__(255);
+var _fetchInitialDataReducer = __webpack_require__(257);
 
 var _fetchInitialDataReducer2 = _interopRequireDefault(_fetchInitialDataReducer);
 
-var _addToCartReducer = __webpack_require__(256);
+var _adjustCartReducer = __webpack_require__(266);
 
-var _addToCartReducer2 = _interopRequireDefault(_addToCartReducer);
+var _adjustCartReducer2 = _interopRequireDefault(_adjustCartReducer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootReducer = (0, _redux.combineReducers)({
   path: _setPathReducer2.default,
   initialData: _fetchInitialDataReducer2.default,
-  cart: _addToCartReducer2.default
+  cart: _adjustCartReducer2.default
 });
 
 exports.default = rootReducer;
 
 /***/ }),
-/* 254 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33452,7 +33598,7 @@ var setPathReducer = function setPathReducer() {
 exports.default = setPathReducer;
 
 /***/ }),
-/* 255 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33485,46 +33631,14 @@ var fetchInitialDataReducer = function fetchInitialDataReducer() {
 exports.default = fetchInitialDataReducer;
 
 /***/ }),
-/* 256 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _constants = __webpack_require__(11);
-
-var _constants2 = _interopRequireDefault(_constants);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-var addToCartReducer = function addToCartReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var action = arguments[1];
-
-  switch (action.type) {
-    case _constants2.default.ADD_TO_CART:
-      return [].concat(_toConsumableArray(state), [action.payload]);
-    default:
-      return state;
-  }
-};
-
-exports.default = addToCartReducer;
-
-/***/ }),
-/* 257 */
+/* 258 */,
+/* 259 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_matchPath__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_matchPath___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_router_matchPath__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_Router__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_Router__ = __webpack_require__(260);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_Router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_router_Router__);
 
 
@@ -33557,7 +33671,7 @@ var matchRoutes = function matchRoutes(routes, pathname) {
 /* harmony default export */ __webpack_exports__["a"] = (matchRoutes);
 
 /***/ }),
-/* 258 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33682,15 +33796,15 @@ Router.childContextTypes = {
 exports.default = Router;
 
 /***/ }),
-/* 259 */
+/* 261 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_Switch__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_Switch__ = __webpack_require__(262);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_Switch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_router_Switch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_Route__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_Route__ = __webpack_require__(263);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_Route___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router_Route__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -33720,7 +33834,7 @@ var renderRoutes = function renderRoutes(routes) {
 /* harmony default export */ __webpack_exports__["a"] = (renderRoutes);
 
 /***/ }),
-/* 260 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33822,7 +33936,7 @@ Switch.propTypes = {
 exports.default = Switch;
 
 /***/ }),
-/* 261 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33980,7 +34094,8 @@ Route.childContextTypes = {
 exports.default = Route;
 
 /***/ }),
-/* 262 */
+/* 264 */,
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33990,65 +34105,29 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(0);
+var _constants = __webpack_require__(11);
 
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(21);
+var _constants2 = _interopRequireDefault(_constants);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var OrderSummary = function OrderSummary(props) {
-  var items = props.cart || [];
-  var sum = items.reduce(function (total, item) {
-    return total + item.price;
-  }, 0) || 0;
-  return _react2.default.createElement(
-    'div',
-    { className: 'order-summary' },
-    _react2.default.createElement(
-      'div',
-      { className: 'order-summary__container' },
-      _react2.default.createElement(
-        'div',
-        { className: 'order-summary__title' },
-        _react2.default.createElement(
-          'h3',
-          { className: 'order-summary__title-header' },
-          'Order Summary'
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'order-summary__details' },
-        _react2.default.createElement(
-          'span',
-          { className: 'order-summary__subtotal' },
-          'Subtotal'
-        ),
-        _react2.default.createElement(
-          'span',
-          { className: 'order-summary__amount' },
-          '$' + sum
-        )
-      )
-    ),
-    _react2.default.createElement(
-      'button',
-      { className: 'order-summary__button' },
-      'CONTINUE TO CHECKOUT'
-    )
-  );
-};
-var mapStateToProps = function mapStateToProps(state) {
+// const addToCart = (product) => {
+//   return {
+//     type: constants.ADD_TO_CART,
+//     payload: product
+//   }
+// }
+var adjustCart = function adjustCart(type, payload) {
   return {
-    cart: state.cart
+    type: type,
+    payload: payload
   };
 };
-exports.default = (0, _reactRedux.connect)(mapStateToProps, null)(OrderSummary);
+
+exports.default = adjustCart;
 
 /***/ }),
-/* 263 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34058,21 +34137,28 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(0);
+var _constants = __webpack_require__(11);
 
-var _react2 = _interopRequireDefault(_react);
+var _constants2 = _interopRequireDefault(_constants);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var OrderList = function OrderList() {
-  return _react2.default.createElement(
-    'div',
-    { className: 'order-list' },
-    _react2.default.createElement('ul', { className: 'order-list__container' })
-  );
-};
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-exports.default = OrderList;
+var adjustCartReducer = function adjustCartReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var action = arguments[1];
+
+  switch (action.type) {
+    case _constants2.default.ADD_TO_CART:
+      return [].concat(_toConsumableArray(state), [action.payload]);
+    case _constants2.default.REMOVE_FROM_CART:
+      return state.slice(0, action.payload).concat(state.slice(action.payload + 1));
+    default:
+      return state;
+  }
+};
+exports.default = adjustCartReducer;
 
 /***/ })
 /******/ ]);

@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import { addToCart } from '../actions';
+import { adjustCart } from '../actions';
+
+import constants from '../constants';
 
 const Product = (props) => {
-  console.log(props)
   const addToCart = () => {
     props.addToCart(props.product) 
   }
@@ -38,7 +39,9 @@ const Product = (props) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addToCart: (product) => {
-      dispatch(addToCart(product))
+      // adjustCart is an action 
+      // adjustCart(action type, payload)
+      dispatch(adjustCart(constants.ADD_TO_CART, product))
     }
   }
 }

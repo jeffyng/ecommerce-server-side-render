@@ -1,11 +1,8 @@
 import constants from '../constants';
-import  setPath  from './setPath';
+import setPath  from './setPath';
 import fetchInitialData from './fetchInitialData';
-import addToCart from './addToCart';
+import adjustCart from './adjustCart';
 
 
-
-export {setPath, fetchInitialData, addToCart};
-
-
+export {setPath, fetchInitialData, adjustCart};
 

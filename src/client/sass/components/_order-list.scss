@@ -1,0 +1,51 @@
+.order-list {
+  width: 50%;
+  margin-right: 10rem;
+  &__container {
+
+  }
+
+  &__item {
+    display: flex;
+    border-top: 1px solid rgba(200, 200, 200, .9);
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+    &-img-container {
+      width: 50%;
+    }
+
+    &-img {
+      width: 100%;
+    }
+
+    &-button-container{
+      margin-top: .25rem;
+      width: 100%;
+    }
+    &-remove-button {
+      @include btn();
+      width: 100%;
+    }
+
+    &-details {
+      margin-left: 3rem;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.3rem;
+      & > :not(:last-child) {
+        margin-bottom: .5rem;
+      }
+    }
+
+    &-title {
+      color: rgba(60, 60, 60, .9)
+    }
+    &-color {
+      color: rgba(76, 76, 76, 0.7);
+
+    }
+    &-price {
+      color: rgba(76, 76, 76, 0.7);
+    }
+  }
+}

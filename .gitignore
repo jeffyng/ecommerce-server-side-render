@@ -3,3 +3,5 @@
 **.vscode/
 build/
 public/bundle.js
+**.DS_STORE
+**node_modules/

@@ -456,7 +456,7 @@ html {
 .order__container {
   margin-top: 4rem;
   display: flex;
-  justify-content: space-around; }
+  margin-left: 4rem; }
 
 .order-summary {
   width: 30rem; }
@@ -501,3 +501,48 @@ html {
       transform: translateY(-1.5px); }
     .order-summary__button:active {
       transform: translateY(0); }
+
+.order-list {
+  width: 50%;
+  margin-right: 10rem; }
+  .order-list__item {
+    display: flex;
+    border-top: 1px solid rgba(200, 200, 200, 0.9);
+    padding-top: 2rem;
+    margin-bottom: 4rem; }
+    .order-list__item-img-container {
+      width: 50%; }
+    .order-list__item-img {
+      width: 100%; }
+    .order-list__item-button-container {
+      margin-top: .25rem;
+      width: 100%; }
+    .order-list__item-remove-button {
+      background: linear-gradient(45deg, #4b4b4b, #5a5a5a);
+      font-size: 1.5rem;
+      color: white;
+      border-radius: 3px;
+      line-height: 4rem;
+      font-weight: 300;
+      cursor: pointer;
+      width: 100%; }
+      .order-list__item-remove-button:focus {
+        outline: none;
+        border: none; }
+      .order-list__item-remove-button:hover {
+        transform: translateY(-1.5px); }
+      .order-list__item-remove-button:active {
+        transform: translateY(0); }
+    .order-list__item-details {
+      margin-left: 3rem;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.3rem; }
+      .order-list__item-details > :not(:last-child) {
+        margin-bottom: .5rem; }
+    .order-list__item-title {
+      color: rgba(60, 60, 60, 0.9); }
+    .order-list__item-color {
+      color: rgba(76, 76, 76, 0.7); }
+    .order-list__item-price {
+      color: rgba(76, 76, 76, 0.7); }
