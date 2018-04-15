@@ -3,7 +3,7 @@ import React from 'react';
 const TripleImage = () => (
   <section className="triple-image">
     <div className="triple-image__container triple-image__container-1">
-      <a href="#" className="">
+      <a href="/women" className="">
         <div className="triple-image__container__text-block">
           <h3 className="triple-image__container__text-block-title">The Kick Crop</h3>
           <span className="triple-image__container__text-block-text">Shop Now</span>
@@ -12,7 +12,7 @@ const TripleImage = () => (
       </a>
     </div>
     <div className="triple-image__container triple-image__container-2">
-      <a href="#">
+      <a href="/women">
         <div className="triple-image__container__text-block">
           <h3 className="triple-image__container__text-block-title">New Day Heels</h3>
           <span className="triple-image__container__text-block-text">Shop Now</span>
@@ -21,7 +21,7 @@ const TripleImage = () => (
       </a>
     </div>
     <div className="triple-image__container triple-image__container-3">
-      <a href="#">
+      <a href="/men">
         <div className="triple-image__container__text-block">
           <h3 className="triple-image__container__text-block-title">Back in Stock</h3>
           <span className="triple-image__container__text-block-text">Shop Now</span>

@@ -24910,7 +24910,7 @@ var Slides = function Slides() {
         ),
         _react2.default.createElement(
           "a",
-          { className: "btn slides__btn", href: "#" },
+          { className: "btn slides__btn", href: "/women" },
           "Shop Now"
         )
       ),
@@ -24924,7 +24924,7 @@ var Slides = function Slides() {
         ),
         _react2.default.createElement(
           "a",
-          { className: "btn slides__btn", href: "#" },
+          { className: "btn slides__btn", href: "/men" },
           "Shop Now"
         )
       ),
@@ -24938,7 +24938,7 @@ var Slides = function Slides() {
         ),
         _react2.default.createElement(
           "a",
-          { className: "btn slides__btn", href: "#" },
+          { className: "btn slides__btn", href: "/women" },
           "Shop Now"
         )
       ),
@@ -24952,7 +24952,7 @@ var Slides = function Slides() {
         ),
         _react2.default.createElement(
           "a",
-          { className: "btn slides__btn", href: "#" },
+          { className: "btn slides__btn", href: "/women" },
           "Shop Now"
         )
       ),
@@ -24966,7 +24966,7 @@ var Slides = function Slides() {
         ),
         _react2.default.createElement(
           "a",
-          { className: "btn slides__btn", href: "#" },
+          { className: "btn slides__btn", href: "/men" },
           "Shop Now"
         )
       )
@@ -25011,7 +25011,7 @@ var DualImage = function DualImage() {
         ),
         _react2.default.createElement(
           "a",
-          { className: "btn dual-image__btn", href: "#" },
+          { className: "btn dual-image__btn", href: "/women" },
           "Shop Now"
         )
       )
@@ -25033,12 +25033,12 @@ var DualImage = function DualImage() {
           { className: "dual-image__text-block__btn-group" },
           _react2.default.createElement(
             "a",
-            { className: "btn dual-image__btn", href: "#" },
+            { className: "btn dual-image__btn", href: "/men" },
             "Shop Men"
           ),
           _react2.default.createElement(
             "a",
-            { className: "btn dual-image__btn", href: "#" },
+            { className: "btn dual-image__btn", href: "/women" },
             "Shop Women"
           )
         )
@@ -25075,7 +25075,7 @@ var TripleImage = function TripleImage() {
       { className: "triple-image__container triple-image__container-1" },
       _react2.default.createElement(
         "a",
-        { href: "#", className: "" },
+        { href: "/women", className: "" },
         _react2.default.createElement(
           "div",
           { className: "triple-image__container__text-block" },
@@ -25098,7 +25098,7 @@ var TripleImage = function TripleImage() {
       { className: "triple-image__container triple-image__container-2" },
       _react2.default.createElement(
         "a",
-        { href: "#" },
+        { href: "/women" },
         _react2.default.createElement(
           "div",
           { className: "triple-image__container__text-block" },
@@ -25121,7 +25121,7 @@ var TripleImage = function TripleImage() {
       { className: "triple-image__container triple-image__container-3" },
       _react2.default.createElement(
         "a",
-        { href: "#" },
+        { href: "/men" },
         _react2.default.createElement(
           "div",
           { className: "triple-image__container__text-block" },

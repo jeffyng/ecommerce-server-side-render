@@ -6,7 +6,7 @@ const DualImage = () => (
       <img className="dual-image__img" src="../img/homepage-double-1.jpg" alt="Wear to Work" />
       <div className="dual-image__text-block">
         <h2 className="dual-image-title">Wear to Work</h2>
-        <a className="btn dual-image__btn" href="#">Shop Now</a>
+        <a className="btn dual-image__btn" href="/women">Shop Now</a>
       </div>
     </div>
     <div className="dual-image__container dual-image__container-2">
@@ -14,8 +14,8 @@ const DualImage = () => (
       <div className="dual-image__text-block">
         <h2 className="dual-image-title">#DamnGoodDenim</h2>
         <div className="dual-image__text-block__btn-group">
-          <a className="btn dual-image__btn" href="#">Shop Men</a>
-          <a className="btn dual-image__btn" href="#">Shop Women</a>
+          <a className="btn dual-image__btn" href="/men">Shop Men</a>
+          <a className="btn dual-image__btn" href="/women">Shop Women</a>
         </div>
       </div>
     </div>
