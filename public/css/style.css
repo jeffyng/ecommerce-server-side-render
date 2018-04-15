@@ -525,7 +525,8 @@ html {
       line-height: 4rem;
       font-weight: 300;
       cursor: pointer;
-      width: 100%; }
+      width: 100%;
+      background: linear-gradient(45deg, rgba(248, 68, 68, 0.9), rgba(252, 20, 20, 0.9)); }
       .order-list__item-remove-button:focus {
         outline: none;
         border: none; }
