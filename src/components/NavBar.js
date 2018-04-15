@@ -18,13 +18,13 @@ const NavBar = () => (
           <span className="navbar__text">Visit Us</span>
         </a>
       </li>
-      <li className="navbar__item">
+      {/* <li className="navbar__item">
         <a className="navbar__link" href="#">
           <span className="navbar__text">Factories</span>
         </a>
-      </li>
+      </li> */}
       <li className="navbar__item">
-        <a className="navbar__link" href="#">
+        <a className="navbar__link" href="/about">
           <span className="navbar__text">About</span>
         </a>
       </li>

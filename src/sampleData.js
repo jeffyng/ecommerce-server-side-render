@@ -124,7 +124,8 @@ const data= {
   },
   storeInfo: {
     imageUrl: '../img/store.jpg',
-  }  
+  },
+  
 };
 
 export default data;

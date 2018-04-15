@@ -1,0 +1,39 @@
+.about {
+
+  &-hero {
+    background-image: url("../img/hero-about.jpg");
+    background-size: 100%;
+    height: 90vh;
+    color: rgb(255,255,255);
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__title {
+      font-size: 7rem;
+      font-weight: 400;
+      line-height: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    &__text {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__summary {
+    background-color: rgba(100,100,100, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-text {
+      color: rgb(255,255,255);
+      line-height: 7rem;
+      font-size: 3.5rem;
+      padding: 10rem 20rem;
+      text-align: center;
+    }
+  }
+}

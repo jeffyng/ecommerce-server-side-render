@@ -3,6 +3,8 @@ import Home from '../pages/Home';
 import Products from '../pages/Products';
 import Cart from '../pages/Cart';
 import VisitUs from '../pages/VisitUs';
+import About from '../pages/About';
+
 // import { Route } from 'react-router-dom';
 
 // export default () => (
@@ -30,6 +32,10 @@ export default [
   {
     path: '/visit',
     component: VisitUs
+  }, 
+  {
+    path: '/about',
+    component: About
   },
   {
     path: '/cart',
