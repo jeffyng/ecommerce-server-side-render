@@ -619,3 +619,47 @@ html {
     font-size: 3.5rem;
     padding: 10rem 20rem;
     text-align: center; }
+
+.checkout-form {
+  width: 60%;
+  margin: 2rem auto; }
+  .checkout-form__info {
+    background-color: rgba(247, 247, 247, 0.9);
+    color: rgba(100, 100, 100, 0.9);
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    margin-bottom: 1rem; }
+  .checkout-form__container {
+    display: flex;
+    flex-direction: column; }
+  .checkout-form__header {
+    margin-bottom: 1.5rem; }
+  .checkout-form__label {
+    margin-bottom: .5rem;
+    font-size: 2rem; }
+  .checkout-form__input {
+    height: 4rem;
+    margin-bottom: 2.5rem;
+    font-size: inherit;
+    font-family: inherit; }
+    .checkout-form__input::placeholder {
+      font-size: inherit;
+      color: rgba(100, 100, 100, 0.4); }
+  .checkout-form__button {
+    background: linear-gradient(45deg, #4b4b4b, #5a5a5a);
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 3px;
+    line-height: 4rem;
+    font-weight: 300;
+    cursor: pointer;
+    width: 100%; }
+    .checkout-form__button:focus {
+      outline: none;
+      border: none; }
+    .checkout-form__button:hover {
+      transform: translateY(-1.5px); }
+    .checkout-form__button:active {
+      transform: translateY(0); }

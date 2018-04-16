@@ -4,6 +4,7 @@ import Products from '../pages/Products';
 import Cart from '../pages/Cart';
 import VisitUs from '../pages/VisitUs';
 import About from '../pages/About';
+import CheckOut from '../pages/CheckOut';
 
 // import { Route } from 'react-router-dom';
 
@@ -40,5 +41,9 @@ export default [
   {
     path: '/cart',
     component: Cart,
+  },
+  {
+    path: '/checkout',
+    component: CheckOut
   }
 ];

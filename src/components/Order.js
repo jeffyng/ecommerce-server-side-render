@@ -6,7 +6,7 @@ import OrderList from './OrderList';
 const Order = (props) => {
   return (
     <div className='order'>
-      <div className='order__container'>
+      <div className='order__container'> 
         <OrderList />
         <OrderSummary />
       </div>
@@ -16,8 +16,11 @@ const Order = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.cart
+    cart: state.cart,
+    checkOut: state.checkOut
   }
 };
+
+
 
 export default connect(mapStateToProps, null)(Order);

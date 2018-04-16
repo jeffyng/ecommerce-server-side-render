@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import checkOut from '../actions';
 
 const OrderSummary = (props) => {
   const items = props.cart  || [];
@@ -15,7 +16,7 @@ const OrderSummary = (props) => {
           <span className="order-summary__amount">{'$' + sum}</span>
         </div>
       </div>
-      <button className="order-summary__button">CONTINUE TO CHECKOUT</button>
+      <a href="/checkout"><button className="order-summary__button">CONTINUE TO CHECKOUT</button></a>
     </div>
   )
 };
@@ -23,5 +24,13 @@ const mapStateToProps = (state) => {
   return {
     cart: state.cart
   }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    checkOut: () => {
+      dispatch(checkOut())
+    }
+  }
 }
-export default connect(mapStateToProps, null)(OrderSummary);
+export default connect(mapStateToProps, mapDispatchToProps)(OrderSummary);

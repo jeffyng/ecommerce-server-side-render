@@ -282,7 +282,8 @@ exports.default = {
   MEN: 'MEN',
   WOMEN: 'WOMEN',
   ADD_TO_CART: 'ADD_TO_CART',
-  REMOVE_FROM_CART: 'REMOVE_FROM_CART'
+  REMOVE_FROM_CART: 'REMOVE_FROM_CART',
+  CHECK_OUT: 'CHECK_OUT'
 };
 
 /***/ }),
@@ -3624,7 +3625,7 @@ var locationsAreEqual = function locationsAreEqual(a, b) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.adjustCart = exports.fetchInitialData = exports.setPath = undefined;
+exports.checkOut = exports.adjustCart = exports.fetchInitialData = exports.setPath = undefined;
 
 var _constants = __webpack_require__(7);
 
@@ -3642,11 +3643,16 @@ var _adjustCart = __webpack_require__(249);
 
 var _adjustCart2 = _interopRequireDefault(_adjustCart);
 
+var _checkOut = __webpack_require__(268);
+
+var _checkOut2 = _interopRequireDefault(_checkOut);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.setPath = _setPath2.default;
 exports.fetchInitialData = _fetchInitialData2.default;
 exports.adjustCart = _adjustCart2.default;
+exports.checkOut = _checkOut2.default;
 
 /***/ }),
 /* 37 */
@@ -31594,6 +31600,10 @@ var _About = __webpack_require__(256);
 
 var _About2 = _interopRequireDefault(_About);
 
+var _CheckOut = __webpack_require__(269);
+
+var _CheckOut2 = _interopRequireDefault(_CheckOut);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import { Route } from 'react-router-dom';
@@ -31625,6 +31635,9 @@ exports.default = [{
 }, {
   path: '/cart',
   component: _Cart2.default
+}, {
+  path: '/checkout',
+  component: _CheckOut2.default
 }];
 
 /***/ }),
@@ -33366,7 +33379,8 @@ var Order = function Order(props) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    cart: state.cart
+    cart: state.cart,
+    checkOut: state.checkOut
   };
 };
 
@@ -33388,6 +33402,10 @@ var _react = __webpack_require__(0);
 var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(9);
+
+var _actions = __webpack_require__(36);
+
+var _actions2 = _interopRequireDefault(_actions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33427,9 +33445,13 @@ var OrderSummary = function OrderSummary(props) {
       )
     ),
     _react2.default.createElement(
-      'button',
-      { className: 'order-summary__button' },
-      'CONTINUE TO CHECKOUT'
+      'a',
+      { href: '/checkout' },
+      _react2.default.createElement(
+        'button',
+        { className: 'order-summary__button' },
+        'CONTINUE TO CHECKOUT'
+      )
     )
   );
 };
@@ -33438,7 +33460,15 @@ var mapStateToProps = function mapStateToProps(state) {
     cart: state.cart
   };
 };
-exports.default = (0, _reactRedux.connect)(mapStateToProps, null)(OrderSummary);
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    checkOut: function checkOut() {
+      dispatch((0, _actions2.default)());
+    }
+  };
+};
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(OrderSummary);
 
 /***/ }),
 /* 253 */
@@ -33822,12 +33852,17 @@ var _adjustCartReducer = __webpack_require__(261);
 
 var _adjustCartReducer2 = _interopRequireDefault(_adjustCartReducer);
 
+var _checkOutReducer = __webpack_require__(267);
+
+var _checkOutReducer2 = _interopRequireDefault(_checkOutReducer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootReducer = (0, _redux.combineReducers)({
   path: _setPathReducer2.default,
   initialData: _fetchInitialDataReducer2.default,
-  cart: _adjustCartReducer2.default
+  cart: _adjustCartReducer2.default,
+  checkOut: _checkOutReducer2.default
 });
 
 exports.default = rootReducer;
@@ -34393,6 +34428,232 @@ Route.childContextTypes = {
   router: _propTypes2.default.object.isRequired
 };
 exports.default = Route;
+
+/***/ }),
+/* 267 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _constants = __webpack_require__(7);
+
+var _constants2 = _interopRequireDefault(_constants);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var checkOutReducer = function checkOutReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  var action = arguments[1];
+
+  switch (action.type) {
+    case _constants2.default.CHECK_OU:
+      return true;
+    default:
+      return state;
+  }
+};
+
+exports.default = checkOutReducer;
+
+/***/ }),
+/* 268 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _constants = __webpack_require__(7);
+
+var _constants2 = _interopRequireDefault(_constants);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var checkOut = function checkOut() {
+  return {
+    type: _constants2.default.CHECK_OUT
+  };
+};
+
+exports.default = checkOut;
+
+/***/ }),
+/* 269 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Header = __webpack_require__(20);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Footer = __webpack_require__(21);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _CheckOutForm = __webpack_require__(270);
+
+var _CheckOutForm2 = _interopRequireDefault(_CheckOutForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CheckOut = function CheckOut() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_Header2.default, null),
+    _react2.default.createElement(
+      'div',
+      { className: 'content' },
+      _react2.default.createElement(_CheckOutForm2.default, null),
+      _react2.default.createElement(_Footer2.default, null)
+    )
+  );
+};
+
+exports.default = CheckOut;
+
+/***/ }),
+/* 270 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CheckOutForm = function CheckOutForm() {
+  return _react2.default.createElement(
+    "form",
+    { className: "checkout-form" },
+    _react2.default.createElement(
+      "div",
+      { className: "checkout-form__info" },
+      _react2.default.createElement(
+        "div",
+        { className: "checkout-form__container" },
+        _react2.default.createElement(
+          "h3",
+          { className: "checkout-form__header" },
+          "Billing Address"
+        ),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "First Name"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", id: "fname", placeholder: "John" }),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "Last Name"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", id: "lname", placeholder: "Smith" }),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "Email"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "email", id: "email", placeholder: "JohnSmith@gmail.com" }),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "Address"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", id: "email", placeholder: "123 Everjane street" }),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "City"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", id: "city", placeholder: "San Francisco" }),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "State"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", id: "state", placeholder: "California" }),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "Zip Code"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", id: "zip", placeholder: "94110" })
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: "checkout-form__container" },
+        _react2.default.createElement(
+          "h3",
+          { className: "checkout-form__header" },
+          "Payment"
+        ),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "Name on Card"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", placeholder: "John Smith" }),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "Credit Card Number"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", placeholder: "4888 1234 5678 9123" }),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "Exp Month"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", placeholder: "September" }),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "Exp Year"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", placeholder: "2018" }),
+        _react2.default.createElement(
+          "label",
+          { className: "checkout-form__label" },
+          "CVV"
+        ),
+        _react2.default.createElement("input", { className: "checkout-form__input", type: "text", placeholder: "352" })
+      )
+    ),
+    _react2.default.createElement(
+      "button",
+      { type: "submit", className: "checkout-form__button" },
+      "Confirm Payment"
+    )
+  );
+};
+
+exports.default = CheckOutForm;
 
 /***/ })
 /******/ ]);

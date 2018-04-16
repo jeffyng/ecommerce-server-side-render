@@ -1,0 +1,43 @@
+.checkout-form {
+  width: 60%;
+  margin: 2rem auto;
+
+  &__info {
+    background-color: rgba(247, 247, 247, 0.9);
+    color: rgba(100, 100, 100, 0.9);
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    margin-bottom: 1rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    margin-bottom: 1.5rem;
+  }
+
+  &__label {
+    margin-bottom: .5rem;
+    font-size: 2rem;
+  }
+
+  &__input {
+    height: 4rem;
+    margin-bottom: 2.5rem;
+    font-size: inherit;
+    font-family: inherit;
+    &::placeholder {
+      font-size: inherit;
+      color: rgba(100, 100, 100, 0.4);
+
+    }
+  }
+  &__button {
+    @include btn();
+    width: 100%;
+  }
+}
